@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://dso67pdub0nok"]
+
+[ext_resource type="Script" path="res://Prefabs/UI Element/LoadBar/load_bar.gd" id="1_wuj84"]
+[ext_resource type="Texture2D" uid="uid://btd4spao6anb3" path="res://Assets/Sprites/UI_Texture/LoadBar/LoadBar_dirt.PNG" id="2_0t45v"]
+[ext_resource type="Texture2D" uid="uid://bmcdm4yi5i1lb" path="res://Assets/Sprites/UI_Texture/LoadBar/LoadBar_grass.PNG" id="3_1sxfe"]
+[ext_resource type="Texture2D" uid="uid://duffwxxfoxllp" path="res://Assets/Sprites/images/Sod/Sod_Scroll/SodRollCap.PNG" id="4_2f4ar"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7m1fr"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4tm5o"]
+blend_mode = 3
+
+[sub_resource type="Animation" id="Animation_ycjkx"]
+resource_name = "RollCap"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SodRollCap:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_ues7g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SodRollCap:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l7cl0"]
+_data = {
+"RESET": SubResource("Animation_ues7g"),
+"RollCap": SubResource("Animation_ycjkx")
+}
+
+[node name="LoadBar" type="Node2D"]
+position = Vector2(0, -40)
+script = ExtResource("1_wuj84")
+
+[node name="LoadBarDirt" type="Sprite2D" parent="."]
+position = Vector2(0, 24)
+texture = ExtResource("2_0t45v")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+position = Vector2(-8, -8)
+
+[node name="Mask" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(1.19206e-07, 6)
+scale = Vector2(314, 32)
+texture = SubResource("CanvasTexture_7m1fr")
+
+[node name="LoadBarGrass" type="Sprite2D" parent="CanvasGroup"]
+material = SubResource("CanvasItemMaterial_4tm5o")
+position = Vector2(0, 6)
+texture = ExtResource("3_1sxfe")
+
+[node name="SodRollCap" type="Sprite2D" parent="."]
+position = Vector2(136, -8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2f4ar")
+
+[node name="RollCapAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l7cl0")
+}
+autoplay = "RollCap"

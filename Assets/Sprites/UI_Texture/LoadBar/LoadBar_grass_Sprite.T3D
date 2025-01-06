@@ -1,0 +1,26 @@
+Begin Object Class=/Script/Paper2D.PaperSprite Name="LoadBar_grass_Sprite" ExportPath="/Script/Paper2D.PaperSprite'/Game/Assets/Sprites/images/UI_Texture/LoadBar/LoadBar_grass_Sprite.LoadBar_grass_Sprite'"
+   Begin Object Class=/Script/Engine.BodySetup Name="BodySetup_0" ExportPath="/Script/Engine.BodySetup'/Game/Assets/Sprites/images/UI_Texture/LoadBar/LoadBar_grass_Sprite.LoadBar_grass_Sprite:BodySetup_0'"
+   End Object
+   Begin Object Name="BodySetup_0" ExportPath="/Script/Engine.BodySetup'/Game/Assets/Sprites/images/UI_Texture/LoadBar/LoadBar_grass_Sprite.LoadBar_grass_Sprite:BodySetup_0'"
+      AggGeom=(BoxElems=((Center=(X=0.000000,Y=0.000000,Z=0.500000),X=314.000000,Y=10.000000,Z=33.000000)))
+      DefaultInstance=(ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic")
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   SourceTextureDimension=(X=314.000000,Y=33.000000)
+   SourceDimension=(X=314.000000,Y=33.000000)
+   SourceTexture="/Game/Assets/Sprites/images/UI_Texture/LoadBar/LoadBar_grass.LoadBar_grass"
+   BakedSourceDimension=(X=314.000000,Y=33.000000)
+   BakedSourceTexture="/Script/Engine.Texture2D'/Game/Assets/Sprites/images/UI_Texture/LoadBar/LoadBar_grass.LoadBar_grass'"
+   DefaultMaterial="/Script/Engine.MaterialInstanceConstant'/Paper2D/TranslucentUnlitSpriteMaterial.TranslucentUnlitSpriteMaterial'"
+   PixelsPerUnrealUnit=1.000000
+   BodySetup="/Script/Engine.BodySetup'BodySetup_0'"
+   CustomPivotPoint=(X=157.000000,Y=17.000000)
+   CollisionGeometry=(Shapes=((Vertices=((X=-157.000000,Y=-16.500000),(X=157.000000,Y=-16.500000),(X=157.000000,Y=16.500000),(X=-157.000000,Y=16.500000)),BoxSize=(X=314.000000,Y=33.000000),BoxPosition=(X=157.000000,Y=16.500000))))
+   RenderGeometry=(Shapes=((Vertices=((X=-157.000000,Y=-16.500000),(X=157.000000,Y=-16.500000),(X=157.000000,Y=16.500000),(X=-157.000000,Y=16.500000)),BoxSize=(X=314.000000,Y=33.000000),BoxPosition=(X=157.000000,Y=16.500000))))
+   BakedRenderData(0)=(X=157.000000,Y=17.000000,Z=1.000000,W=0.000000)
+   BakedRenderData(1)=(X=-157.000000,Y=17.000000,Z=0.000000,W=0.000000)
+   BakedRenderData(2)=(X=-157.000000,Y=-16.000000,Z=0.000000,W=1.000000)
+   BakedRenderData(3)=(X=157.000000,Y=-16.000000,Z=1.000000,W=1.000000)
+   BakedRenderData(4)=(X=157.000000,Y=17.000000,Z=1.000000,W=0.000000)
+   BakedRenderData(5)=(X=-157.000000,Y=-16.000000,Z=0.000000,W=1.000000)
+End Object
