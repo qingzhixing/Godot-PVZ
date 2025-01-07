@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dso67pdub0nok"]
+[gd_scene load_steps=13 format=3 uid="uid://dso67pdub0nok"]
 
 [ext_resource type="Script" path="res://Prefabs/UI Element/LoadBar/load_bar.gd" id="1_wuj84"]
 [ext_resource type="Texture2D" uid="uid://btd4spao6anb3" path="res://Assets/Sprites/UI_Texture/TitleScreen/LoadBar/LoadBar_dirt.PNG" id="2_0t45v"]
 [ext_resource type="Texture2D" uid="uid://bmcdm4yi5i1lb" path="res://Assets/Sprites/UI_Texture/TitleScreen/LoadBar/LoadBar_grass.PNG" id="3_1sxfe"]
 [ext_resource type="Texture2D" uid="uid://duffwxxfoxllp" path="res://Assets/Sprites/images/Sod/Sod_Scroll/SodRollCap.PNG" id="4_2f4ar"]
 [ext_resource type="PackedScene" uid="uid://blnmh2nl5yc6p" path="res://Prefabs/UI Element/Button/ThemedButton.tscn" id="6_i8ih4"]
+[ext_resource type="PackedScene" uid="uid://dh8en1lnu4h16" path="res://Prefabs/UI Element/Sprout/Sprout.tscn" id="6_s6bbl"]
+[ext_resource type="AudioStream" uid="uid://cv4s741ucp3lo" path="res://Assets/SFX/其他/grassstep.WAV" id="7_1het4"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7m1fr"]
 
@@ -51,6 +53,9 @@ _data = {
 [node name="LoadBar" type="Node2D"]
 position = Vector2(0, -40)
 script = ExtResource("1_wuj84")
+sprout1_progress = 0.2
+sprout2_progress = 0.4
+sprout3_progress = 0.9
 
 [node name="LoadBarDirt" type="Sprite2D" parent="."]
 position = Vector2(0, 24)
@@ -88,3 +93,27 @@ offset_right = 78.0
 offset_bottom = 33.0
 text = "Click To Start
 "
+
+[node name="Sprouts" type="Node2D" parent="."]
+position = Vector2(24, 40)
+
+[node name="Sprout" parent="Sprouts" instance=ExtResource("6_s6bbl")]
+z_index = 6
+position = Vector2(-142, -47)
+
+[node name="Sprout2" parent="Sprouts" instance=ExtResource("6_s6bbl")]
+z_index = 6
+position = Vector2(-80, -38)
+
+[node name="Sprout3" parent="Sprouts" instance=ExtResource("6_s6bbl")]
+z_index = 6
+position = Vector2(48, -42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_1het4")
+volume_db = 3.386
+autoplay = true
+
+[connection signal="sprout1_sprout" from="." to="Sprouts/Sprout" method="sprout"]
+[connection signal="sprout2_sprout" from="." to="Sprouts/Sprout2" method="sprout"]
+[connection signal="sprout3_sprout" from="." to="Sprouts/Sprout3" method="sprout"]

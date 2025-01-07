@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm3yd7vpkoc0r"
-path="res://.godot/imported/spotlight.PNG-555a7cadfd0cd7ac6ba1bab4d2a1d325.ctex"
+uid="uid://b8qdunlfxsqe7"
+path="res://.godot/imported/dirtsmall.PNG-e9f37291f65afd44c1071be7b746c7b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/images/Sod/spotlight.PNG"
-dest_files=["res://.godot/imported/spotlight.PNG-555a7cadfd0cd7ac6ba1bab4d2a1d325.ctex"]
+source_file="res://Assets/Sprites/particles/Particles/dirt/DirtSmall/dirtsmall.PNG"
+dest_files=["res://.godot/imported/dirtsmall.PNG-e9f37291f65afd44c1071be7b746c7b9.ctex"]
 
 [params]
 

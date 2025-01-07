@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c131h86cx0emj"
-path="res://.godot/imported/dirtbig.PNG-4012d7b6142f22619dfb364110be920e.ctex"
+uid="uid://dtvqtxtrlqxwl"
+path="res://.godot/imported/dirtbig8.PNG-7bffff061dd5b83e5de01f11920a200f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/particles/Particles/dirtbig.PNG"
-dest_files=["res://.godot/imported/dirtbig.PNG-4012d7b6142f22619dfb364110be920e.ctex"]
+source_file="res://Assets/Sprites/particles/Particles/dirt/DirtBig/dirtbig8.PNG"
+dest_files=["res://.godot/imported/dirtbig8.PNG-7bffff061dd5b83e5de01f11920a200f.ctex"]
 
 [params]
 

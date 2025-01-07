@@ -18,3 +18,6 @@ Godot之前用过 , 很舒服 , 给自己加油吧!
 
 ![static/My-First-Shader-2025.1.7.png](static/My-First-Shader-2025.1.7.png)
 ![static/My-First-Shader-InGame-2025.1.7.png](static/My-First-Shader-InGame-2025.1.7.png)
+
+❤ Loading Screen Finished! 2025.1.7
+![static/Loading-Screen-Finished-2025.1.7.gif](static/Loading-Screen-Finished-2025.1.7.gif)
