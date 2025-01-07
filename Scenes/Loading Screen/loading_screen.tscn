@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://djvmdkbalnkgn"]
+
+[ext_resource type="Script" path="res://Scenes/Loading Screen/loading_screen.gd" id="1_7ggxk"]
+[ext_resource type="Texture2D" uid="uid://cqdrfp71q277j" path="res://Assets/Sprites/UI_Texture/TitleScreen/titlescreen.PNG" id="2_n7x85"]
+[ext_resource type="PackedScene" uid="uid://dso67pdub0nok" path="res://Prefabs/UI Element/LoadBar/load_bar.tscn" id="3_uee1r"]
+[ext_resource type="PackedScene" uid="uid://5grpjvjnxf23" path="res://Prefabs/UI Element/Logo/PvZ Logo.tscn" id="4_wc3jv"]
+
+[node name="LoadingScene" type="Node2D"]
+script = ExtResource("1_7ggxk")
+
+[node name="Titlescreen" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(0, -264)
+texture = ExtResource("2_n7x85")
+
+[node name="LoadBar" parent="." instance=ExtResource("3_uee1r")]
+z_index = 5
+loading_time_seconds = 1.5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -264)
+
+[node name="PvZLogo" parent="." instance=ExtResource("4_wc3jv")]
+position = Vector2(-165, -456)
+
+[node name="SwitchTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="button_clicked" from="LoadBar" to="." method="on_button_clicked"]
+[connection signal="timeout" from="SwitchTimer" to="." method="switch"]

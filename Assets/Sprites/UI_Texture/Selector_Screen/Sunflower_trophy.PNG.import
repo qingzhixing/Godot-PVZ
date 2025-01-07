@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r5jen58y2d0o"
-path="res://.godot/imported/SelectorScreen_Vasebreaker_button.PNG-eb213795e378916dea41b64688b341dd.ctex"
+uid="uid://c41vje12ric6o"
+path="res://.godot/imported/Sunflower_trophy.PNG-cf13d990e4cce53f074c507ae7e6ec4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Vasebreaker_button.PNG"
-dest_files=["res://.godot/imported/SelectorScreen_Vasebreaker_button.PNG-eb213795e378916dea41b64688b341dd.ctex"]
+source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/Sunflower_trophy.PNG"
+dest_files=["res://.godot/imported/Sunflower_trophy.PNG-cf13d990e4cce53f074c507ae7e6ec4b.ctex"]
 
 [params]
 

@@ -1,0 +1,378 @@
+[gd_scene load_steps=65 format=3 uid="uid://dot7d3xkdq2xn"]
+
+[ext_resource type="Texture2D" uid="uid://d4c0d256p25se" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG.PNG" id="1_ig7jr"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/AlphaTexture.gdshader" id="2_jw7ur"]
+[ext_resource type="Texture2D" uid="uid://jbnfey7vd2gr" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG_Center_.PNG" id="3_anm22"]
+[ext_resource type="Texture2D" uid="uid://c7k57sygpg5n1" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG_Center.PNG" id="4_stuyi"]
+[ext_resource type="Texture2D" uid="uid://bthunqfv32wfl" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG_Left_.PNG" id="5_pmcpp"]
+[ext_resource type="Texture2D" uid="uid://bomgsmbj4bf6s" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG_Left.PNG" id="6_aijvt"]
+[ext_resource type="Texture2D" uid="uid://celg2lvyrrl8k" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG_Right_.PNG" id="7_ogqhn"]
+[ext_resource type="Texture2D" uid="uid://cgtmlb5n41dfa" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_BG_Right.PNG" id="8_tx1td"]
+[ext_resource type="Texture2D" uid="uid://cln4jkxkbp3hr" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Cloud4.PNG" id="9_u52li"]
+[ext_resource type="Texture2D" uid="uid://dsynqjuina78t" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Cloud2.PNG" id="10_8s47i"]
+[ext_resource type="Texture2D" uid="uid://dfkwgv8dt2wjr" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Cloud1.PNG" id="11_1g0cy"]
+[ext_resource type="Texture2D" uid="uid://cj70qgqnmnijc" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Cloud5.PNG" id="12_sshv7"]
+[ext_resource type="Texture2D" uid="uid://dequan1le27yn" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Cloud7.PNG" id="13_1ai04"]
+[ext_resource type="Texture2D" uid="uid://ckdoh33inyhqy" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Shadow_StartAdventure.PNG" id="14_f4iqt"]
+[ext_resource type="Texture2D" uid="uid://wcjiaegvhbhp" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Shadow_Adventure.PNG" id="14_mroo1"]
+[ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="15_bhxdr"]
+[ext_resource type="Texture2D" uid="uid://b6imje25ev2fj" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Adventure_button.PNG" id="15_nqbhx"]
+[ext_resource type="Texture2D" uid="uid://l5og0ybwj1e2" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_StartAdventure_Button1.PNG" id="15_rkr05"]
+[ext_resource type="Texture2D" uid="uid://c5likqlb3w6ff" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Adventure_highlight.PNG" id="16_a5yjn"]
+[ext_resource type="Texture2D" uid="uid://blbtwgsoyythb" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_StartAdventure_Highlight.PNG" id="16_f4ehm"]
+[ext_resource type="Texture2D" uid="uid://bcn17jg1y8nng" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Shadow_Challenge.PNG" id="17_b1x4y"]
+[ext_resource type="AudioStream" uid="uid://df5ekq8gtb6s6" path="res://Assets/SFX/UI/墓碑按钮_gravebutton.WAV" id="18_8hxi2"]
+[ext_resource type="Texture2D" uid="uid://dhr6qb4ieg0h" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Challenges_button.PNG" id="18_r5pb6"]
+[ext_resource type="Texture2D" uid="uid://hgtifixfwl1" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Challenges_highlight.PNG" id="19_e57a6"]
+[ext_resource type="Texture2D" uid="uid://diyo3s1qhdtav" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Shadow_Survival.PNG" id="23_5c06w"]
+[ext_resource type="Texture2D" uid="uid://3c4y1hvym630" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Mini_Games_button.PNG" id="24_67ibf"]
+[ext_resource type="Texture2D" uid="uid://ccsiuwe2fje5r" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Mini_Games_highlight.PNG" id="25_726d1"]
+[ext_resource type="Texture2D" uid="uid://csggknihlilrf" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Shadow_ZenGarden.PNG" id="26_145bd"]
+[ext_resource type="Texture2D" uid="uid://dbx6h823kc6r3" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Survival_button.PNG" id="27_gnk6m"]
+[ext_resource type="Texture2D" uid="uid://ds55kgowvkq7d" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Survival_highlight.PNG" id="28_jmenw"]
+[ext_resource type="Texture2D" uid="uid://3snwyyv2aksq" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Leaf3.PNG" id="29_sgvhw"]
+[ext_resource type="Texture2D" uid="uid://n23h5n1lmlam" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Leaves.PNG" id="30_a3wti"]
+[ext_resource type="Texture2D" uid="uid://dnub3crqxkmw6" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Leaf2.PNG" id="31_l0eu8"]
+[ext_resource type="Texture2D" uid="uid://b586plcg3hiwl" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Leaf4.PNG" id="32_bs4v2"]
+[ext_resource type="Texture2D" uid="uid://1rld8ip1ji8s" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Leaf5.PNG" id="33_2sw8x"]
+[ext_resource type="Texture2D" uid="uid://dlvfg1qh31sp" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Leaf1.PNG" id="34_3w15j"]
+[ext_resource type="Texture2D" uid="uid://nupys410dpje" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Flower1.PNG" id="35_qcdko"]
+[ext_resource type="Texture2D" uid="uid://b3iu8ho32qcoi" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Flower2.PNG" id="36_ylsej"]
+[ext_resource type="Texture2D" uid="uid://c1cfy0y85tad4" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Flower3.PNG" id="37_4sl3i"]
+[ext_resource type="Texture2D" uid="uid://cy4d0ldv676j2" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign1.PNG" id="38_w4w0g"]
+[ext_resource type="Texture2D" uid="uid://bcu8r0eg3qhuu" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign2.PNG" id="39_ljebi"]
+[ext_resource type="Texture2D" uid="uid://cleufoe31xbjx" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign2_press.PNG" id="40_vmppv"]
+[ext_resource type="Texture2D" uid="uid://cc06ih260osvc" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign3.PNG" id="41_jy4ia"]
+[ext_resource type="Texture2D" uid="uid://dpf582oowxdt3" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign3_press.PNG" id="42_dyrrw"]
+[ext_resource type="Texture2D" uid="uid://betkmlx7vgtal" path="res://Assets/Sprites/UI_Texture/Selector_Screen/Achievements_pedestal.PNG" id="43_jlogu"]
+[ext_resource type="Texture2D" uid="uid://l2ikii62dc3c" path="res://Assets/Sprites/UI_Texture/Selector_Screen/Achievements_pedestal_press.PNG" id="44_c85qy"]
+[ext_resource type="Texture2D" uid="uid://bf6oiuudrmmo7" path="res://Assets/Sprites/UI_Texture/Selector_Screen/Sunflower_trophy_silver.PNG" id="45_345fb"]
+[ext_resource type="Texture2D" uid="uid://cayxm654vv31g" path="res://Assets/Sprites/UI_Texture/Selector_Screen/Sunflower_trophy_gold.PNG" id="46_kw1ul"]
+[ext_resource type="Texture2D" uid="uid://mes424w608ov" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Almanac.PNG" id="47_pkc3b"]
+[ext_resource type="Texture2D" uid="uid://2otejpq7sun5" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_AlmanacHighlight.PNG" id="48_pie33"]
+[ext_resource type="Texture2D" uid="uid://dyu4aacsmg72n" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Help1.PNG" id="49_v7cln"]
+[ext_resource type="Texture2D" uid="uid://b3n80k21k4xye" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Help2.PNG" id="50_iutma"]
+[ext_resource type="Texture2D" uid="uid://m40typ0uvv7e" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Options1.PNG" id="51_3t3n6"]
+[ext_resource type="Texture2D" uid="uid://c2xo30k2qaf1n" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Options2.PNG" id="52_75vhm"]
+[ext_resource type="Texture2D" uid="uid://ciboeh21rp4ix" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Quit1.PNG" id="53_nswcr"]
+[ext_resource type="Texture2D" uid="uid://vfv3pwr8wqjo" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Quit2.PNG" id="54_13nxu"]
+[ext_resource type="Texture2D" uid="uid://b0h13ttbryrv5" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Store.PNG" id="55_3q1fk"]
+[ext_resource type="Texture2D" uid="uid://q5bt1n4ncwct" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_StoreHighlight.PNG" id="56_24ge5"]
+[ext_resource type="Texture2D" uid="uid://b6waj1f6fafqj" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_ZenGarden.PNG" id="57_7vciu"]
+[ext_resource type="Texture2D" uid="uid://b821ke180wtmo" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_ZenGardenHighlight.PNG" id="58_wddnt"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="59_dibvv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_grhs7"]
+shader = ExtResource("2_jw7ur")
+shader_parameter/greyTexture = ExtResource("3_anm22")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nlhyh"]
+shader = ExtResource("2_jw7ur")
+shader_parameter/greyTexture = ExtResource("5_pmcpp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2xno"]
+shader = ExtResource("2_jw7ur")
+shader_parameter/greyTexture = ExtResource("7_ogqhn")
+
+[node name="SelectorScreen" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="SelectorScreen_BG" type="Sprite2D" parent="."]
+scale = Vector2(8.005, 8)
+texture = ExtResource("1_ig7jr")
+
+[node name="SelectorScreenBgCenter" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_grhs7")
+position = Vector2(0, 106)
+scale = Vector2(1.11111, 1.10889)
+texture = ExtResource("4_stuyi")
+
+[node name="Cloud" type="Node2D" parent="."]
+
+[node name="SelectorScreenCloud4" type="Sprite2D" parent="Cloud"]
+position = Vector2(245, -88)
+texture = ExtResource("9_u52li")
+
+[node name="SelectorScreenCloud2" type="Sprite2D" parent="Cloud"]
+position = Vector2(-327, -33)
+texture = ExtResource("10_8s47i")
+
+[node name="SelectorScreenCloud1" type="Sprite2D" parent="Cloud"]
+position = Vector2(-271, -186)
+texture = ExtResource("11_1g0cy")
+
+[node name="SelectorScreenCloud5" type="Sprite2D" parent="Cloud"]
+position = Vector2(53, -217)
+texture = ExtResource("12_sshv7")
+
+[node name="SelectorScreenCloud7" type="Sprite2D" parent="Cloud"]
+position = Vector2(281, 12)
+texture = ExtResource("13_1ai04")
+
+[node name="SelectorScreenBgLeft" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_nlhyh")
+position = Vector2(-191, 0)
+scale = Vector2(0.879926, 0.882302)
+texture = ExtResource("6_aijvt")
+
+[node name="SelectorScreenBgRight" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_b2xno")
+position = Vector2(38, 20)
+texture = ExtResource("8_tx1td")
+
+[node name="Selections" type="Node2D" parent="."]
+
+[node name="StartAdventure" type="Node2D" parent="Selections"]
+position = Vector2(5, -247)
+
+[node name="StartAdventure_Shadow" type="Sprite2D" parent="Selections/StartAdventure"]
+position = Vector2(172, 76)
+texture = ExtResource("14_f4iqt")
+
+[node name="StartAdventure_Button" parent="Selections/StartAdventure" instance=ExtResource("15_bhxdr")]
+offset_left = 4.0
+offset_right = 335.0
+offset_bottom = 146.0
+texture_normal = ExtResource("15_rkr05")
+texture_pressed = ExtResource("16_f4ehm")
+texture_hover = ExtResource("16_f4ehm")
+click_audio = ExtResource("18_8hxi2")
+enable_mask = true
+
+[node name="Adventure" type="Node2D" parent="Selections"]
+visible = false
+position = Vector2(5, -10)
+
+[node name="Adventure_Shadow" type="Sprite2D" parent="Selections/Adventure"]
+position = Vector2(171, -161)
+texture = ExtResource("14_mroo1")
+
+[node name="Adventure_button" parent="Selections/Adventure" instance=ExtResource("15_bhxdr")]
+offset_left = 5.0
+offset_top = -237.0
+offset_right = 334.0
+offset_bottom = -94.0
+texture_normal = ExtResource("15_nqbhx")
+texture_pressed = ExtResource("16_a5yjn")
+texture_hover = ExtResource("16_a5yjn")
+click_audio = ExtResource("18_8hxi2")
+
+[node name="MiniGames" type="Node2D" parent="Selections"]
+position = Vector2(-3, 90)
+
+[node name="MiniGamesShadow" type="Sprite2D" parent="Selections/MiniGames"]
+position = Vector2(172, -157)
+texture = ExtResource("23_5c06w")
+
+[node name="MiniGamesButton" parent="Selections/MiniGames" instance=ExtResource("15_bhxdr")]
+offset_left = 12.0
+offset_top = -229.0
+offset_right = 325.0
+offset_bottom = -96.0
+texture_normal = ExtResource("24_67ibf")
+texture_pressed = ExtResource("25_726d1")
+texture_hover = ExtResource("25_726d1")
+click_audio = ExtResource("18_8hxi2")
+enable_mask = true
+
+[node name="Challenges" type="Node2D" parent="Selections"]
+position = Vector2(2, 181)
+
+[node name="SelectorScreen_Shadow_Challenge" type="Sprite2D" parent="Selections/Challenges"]
+position = Vector2(156, -163)
+texture = ExtResource("17_b1x4y")
+
+[node name="Challenges_button" parent="Selections/Challenges" instance=ExtResource("15_bhxdr")]
+offset_left = 12.0
+offset_top = -228.0
+offset_right = 298.0
+offset_bottom = -106.0
+texture_normal = ExtResource("18_r5pb6")
+texture_pressed = ExtResource("19_e57a6")
+texture_hover = ExtResource("19_e57a6")
+click_audio = ExtResource("18_8hxi2")
+enable_mask = true
+
+[node name="Survival" type="Node2D" parent="Selections"]
+position = Vector2(0, 255)
+
+[node name="SurvivalShadow" type="Sprite2D" parent="Selections/Survival"]
+position = Vector2(150, -164)
+texture = ExtResource("26_145bd")
+
+[node name="SurvivalButton" parent="Selections/Survival" instance=ExtResource("15_bhxdr")]
+offset_left = 12.0
+offset_top = -228.0
+offset_right = 278.0
+offset_bottom = -105.0
+texture_normal = ExtResource("27_gnk6m")
+texture_pressed = ExtResource("28_jmenw")
+texture_hover = ExtResource("28_jmenw")
+click_audio = ExtResource("18_8hxi2")
+enable_mask = true
+
+[node name="Leaves" type="Node2D" parent="."]
+position = Vector2(78, -31)
+scale = Vector2(1.2, 1.1)
+
+[node name="SelectorScreenLeaf3" type="Sprite2D" parent="Leaves"]
+position = Vector2(-351, 274)
+scale = Vector2(0.535714, 0.535714)
+texture = ExtResource("29_sgvhw")
+
+[node name="SelectorScreenLeaf4" type="Sprite2D" parent="Leaves"]
+position = Vector2(-273, 265)
+scale = Vector2(0.535714, 0.535714)
+texture = ExtResource("29_sgvhw")
+
+[node name="SelectorScreenLeaves" type="Sprite2D" parent="Leaves"]
+position = Vector2(-312.903, 277.5)
+scale = Vector2(0.725806, 0.725806)
+texture = ExtResource("30_a3wti")
+
+[node name="SelectorScreenLeaf2" type="Sprite2D" parent="Leaves"]
+position = Vector2(-214.5, 282.75)
+scale = Vector2(1.31818, 1.31818)
+texture = ExtResource("31_l0eu8")
+
+[node name="SelectorScreenLeaf5" type="Sprite2D" parent="Leaves"]
+position = Vector2(-233.5, 285.75)
+scale = Vector2(0.78125, 0.78125)
+texture = ExtResource("32_bs4v2")
+
+[node name="SelectorScreenLeaf6" type="Sprite2D" parent="Leaves"]
+position = Vector2(-205.625, 286.15)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("33_2sw8x")
+
+[node name="SelectorScreenLeaf1" type="Sprite2D" parent="Leaves"]
+position = Vector2(-189.625, 284.15)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("34_3w15j")
+
+[node name="Flowers" type="Node2D" parent="."]
+
+[node name="SelectorScreenFlower1" type="Sprite2D" parent="Flowers"]
+position = Vector2(298, 140)
+texture = ExtResource("35_qcdko")
+
+[node name="SelectorScreenFlower2" type="Sprite2D" parent="Flowers"]
+position = Vector2(263, 158)
+texture = ExtResource("36_ylsej")
+
+[node name="SelectorScreenFlower3" type="Sprite2D" parent="Flowers"]
+position = Vector2(358, 179)
+texture = ExtResource("37_4sl3i")
+
+[node name="WoodSign" type="Node2D" parent="."]
+
+[node name="WoodSign_name" type="Sprite2D" parent="WoodSign"]
+position = Vector2(-237, -225)
+texture = ExtResource("38_w4w0g")
+
+[node name="WoodSign_change_user" parent="WoodSign" instance=ExtResource("15_bhxdr")]
+offset_left = -386.0
+offset_top = -160.0
+offset_right = -95.0
+offset_bottom = -92.0
+texture_normal = ExtResource("39_ljebi")
+texture_pressed = ExtResource("39_ljebi")
+texture_hover = ExtResource("40_vmppv")
+enable_mask = true
+
+[node name="WoodSign_zombatar" parent="WoodSign" instance=ExtResource("15_bhxdr")]
+offset_left = -380.0
+offset_top = -102.0
+offset_right = -101.0
+offset_bottom = -19.0
+texture_normal = ExtResource("41_jy4ia")
+texture_pressed = ExtResource("41_jy4ia")
+texture_hover = ExtResource("42_dyrrw")
+click_audio = ExtResource("18_8hxi2")
+enable_mask = true
+
+[node name="Label" type="Label" parent="WoodSign"]
+offset_left = -279.0
+offset_top = -208.0
+offset_right = -172.0
+offset_bottom = -185.0
+theme = ExtResource("59_dibvv")
+text = "QingzhiStar!"
+
+[node name="Achivements" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = -379.0
+offset_top = 102.0
+offset_right = -240.0
+offset_bottom = 267.0
+texture_normal = ExtResource("43_jlogu")
+texture_pressed = ExtResource("44_c85qy")
+texture_hover = ExtResource("44_c85qy")
+enable_mask = true
+
+[node name="SunflowerTrophy" type="Node2D" parent="."]
+
+[node name="SunflowerTrophySilver" type="Sprite2D" parent="SunflowerTrophy"]
+position = Vector2(-310, 102)
+texture = ExtResource("45_345fb")
+
+[node name="SunflowerTrophyGold" type="Sprite2D" parent="SunflowerTrophy"]
+visible = false
+position = Vector2(-310, 103)
+texture = ExtResource("46_kw1ul")
+
+[node name="Almanac" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = -80.0
+offset_top = 130.0
+offset_right = 19.0
+offset_bottom = 229.0
+texture_normal = ExtResource("47_pkc3b")
+texture_pressed = ExtResource("48_pie33")
+texture_hover = ExtResource("48_pie33")
+enable_mask = true
+
+[node name="ZenGarden" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = -222.0
+offset_top = 108.0
+offset_right = -31.0
+offset_bottom = 271.0
+texture_normal = ExtResource("57_7vciu")
+texture_pressed = ExtResource("58_wddnt")
+texture_hover = ExtResource("58_wddnt")
+enable_mask = true
+
+[node name="Help" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = 249.0
+offset_top = 219.0
+offset_right = 297.0
+offset_bottom = 241.0
+texture_normal = ExtResource("49_v7cln")
+texture_pressed = ExtResource("50_iutma")
+texture_hover = ExtResource("50_iutma")
+
+[node name="Options" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = 165.0
+offset_top = 189.0
+offset_right = 246.0
+offset_bottom = 220.0
+texture_normal = ExtResource("51_3t3n6")
+texture_pressed = ExtResource("52_75vhm")
+texture_hover = ExtResource("52_75vhm")
+
+[node name="Quit" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = 322.0
+offset_top = 213.0
+offset_right = 369.0
+offset_bottom = 240.0
+texture_normal = ExtResource("53_nswcr")
+texture_pressed = ExtResource("54_13nxu")
+texture_hover = ExtResource("54_13nxu")
+
+[node name="Shop" parent="." instance=ExtResource("15_bhxdr")]
+offset_left = 1.0
+offset_top = 183.0
+offset_right = 131.0
+offset_bottom = 272.0
+texture_normal = ExtResource("55_3q1fk")
+texture_pressed = ExtResource("56_24ge5")
+texture_hover = ExtResource("56_24ge5")

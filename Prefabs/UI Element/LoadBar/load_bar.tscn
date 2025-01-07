@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://duffwxxfoxllp" path="res://Assets/Sprites/images/Sod/Sod_Scroll/SodRollCap.PNG" id="4_2f4ar"]
 [ext_resource type="PackedScene" uid="uid://blnmh2nl5yc6p" path="res://Prefabs/UI Element/Button/ThemedButton.tscn" id="6_i8ih4"]
 [ext_resource type="PackedScene" uid="uid://dh8en1lnu4h16" path="res://Prefabs/UI Element/Sprout/Sprout.tscn" id="6_s6bbl"]
-[ext_resource type="AudioStream" uid="uid://cv4s741ucp3lo" path="res://Assets/SFX/其他/grassstep.WAV" id="7_1het4"]
+[ext_resource type="FontFile" uid="uid://sd1ijmqnu28h" path="res://Assets/Fonts/Brianne-s-Hand 英文图鉴正文.ttf" id="6_x23ap"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7m1fr"]
 
@@ -53,6 +53,7 @@ _data = {
 [node name="LoadBar" type="Node2D"]
 position = Vector2(0, -40)
 script = ExtResource("1_wuj84")
+loading_time_seconds = 2.0
 sprout1_progress = 0.2
 sprout2_progress = 0.4
 sprout3_progress = 0.9
@@ -87,10 +88,11 @@ autoplay = "RollCap"
 
 [node name="ThemedButton" parent="." instance=ExtResource("6_i8ih4")]
 z_index = 6
-offset_left = -88.0
-offset_top = 12.0
-offset_right = 78.0
-offset_bottom = 33.0
+offset_left = -96.0
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("6_x23ap")
 text = "Click To Start
 "
 
@@ -109,11 +111,7 @@ position = Vector2(-80, -38)
 z_index = 6
 position = Vector2(48, -42)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_1het4")
-volume_db = 3.386
-autoplay = true
-
 [connection signal="sprout1_sprout" from="." to="Sprouts/Sprout" method="sprout"]
 [connection signal="sprout2_sprout" from="." to="Sprouts/Sprout2" method="sprout"]
 [connection signal="sprout3_sprout" from="." to="Sprouts/Sprout3" method="sprout"]
+[connection signal="button_click_out_handler" from="ThemedButton" to="." method="on_button_click"]

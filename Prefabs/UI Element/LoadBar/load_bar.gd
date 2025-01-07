@@ -44,6 +44,7 @@ func _ready() -> void:
 	mask.position.x = -mask.scale.x / 2;
 	sod_roll_cap.position.x = MIN_CAP_ROLL_X;
 	themed_button.disabled = true;
+	themed_button.text = "LOADING..."
 	pass # Replace with function body.
 
 
@@ -62,6 +63,7 @@ func _process(delta: float) -> void:
 	if loaded_time >= loading_time_seconds:
 		roll_cap_animation.play("RESET");
 		themed_button.disabled = false;
+		themed_button.text = "CLICK TO START!"
 	
 	# sprout animation
 	if loading_process >= sprout1_progress && !sprout1_sprouted:

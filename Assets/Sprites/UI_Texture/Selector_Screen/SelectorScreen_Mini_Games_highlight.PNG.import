@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds55kgowvkq7d"
-path="res://.godot/imported/SelectorScreen_Survival_highlight.PNG-7111651793b508a8ddfc52a8ad4fe7e0.ctex"
+uid="uid://ccsiuwe2fje5r"
+path="res://.godot/imported/SelectorScreen_Mini_Games_highlight.PNG-ce06e14ca423c43d15ce3700a04fd8ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Survival_highlight.PNG"
-dest_files=["res://.godot/imported/SelectorScreen_Survival_highlight.PNG-7111651793b508a8ddfc52a8ad4fe7e0.ctex"]
+source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Mini_Games_highlight.PNG"
+dest_files=["res://.godot/imported/SelectorScreen_Mini_Games_highlight.PNG-ce06e14ca423c43d15ce3700a04fd8ad.ctex"]
 
 [params]
 

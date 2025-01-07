@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://blnmh2nl5yc6p"]
+[gd_scene load_steps=16 format=3 uid="uid://blnmh2nl5yc6p"]
 
 [ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="1_1ey00"]
 [ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="1_b7wrc"]
 [ext_resource type="Script" path="res://Prefabs/UI Element/Button/themed_button.gd" id="3_m3e6y"]
-[ext_resource type="AudioStream" uid="uid://fe458hjhlpjk" path="res://Assets/SFX/UI/点击1_tap.WAV" id="4_jertv"]
-[ext_resource type="AudioStream" uid="uid://c225f4plelcap" path="res://Assets/SFX/UI/点击2_tap2.WAV" id="5_p6wce"]
+[ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="4_xjyal"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7od4y"]
 
@@ -47,7 +46,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_457d8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tktw5")
 text = "Button Text"
 script = ExtResource("3_m3e6y")
-tap_audio = Array[AudioStream]([ExtResource("4_jertv"), ExtResource("5_p6wce")])
+tap_audio = Array[AudioStream]([ExtResource("4_xjyal")])
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
 

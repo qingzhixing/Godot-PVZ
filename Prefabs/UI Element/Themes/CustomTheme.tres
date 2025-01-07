@@ -1,15 +1,19 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://bgl2wkcdj1wgv"]
 
-[ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="1_54xbr"]
+[ext_resource type="FontFile" uid="uid://sd1ijmqnu28h" path="res://Assets/Fonts/Brianne-s-Hand 英文图鉴正文.ttf" id="1_unjah"]
 
 [resource]
-default_font = ExtResource("1_54xbr")
-/colors/font_color = Color(1, 1, 1, 1)
+default_font = ExtResource("1_unjah")
+/colors/font_color = Color(1, 0.960784, 0.784314, 1)
 /colors/font_disabled_color = Color(0.847059, 0.870588, 0.92549, 1)
 /colors/font_hover_color = Color(0.898039, 0.909804, 0.588235, 1)
 /colors/font_pressed_color = Color(0.658824, 0.721569, 0.776471, 1)
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/colors/font_disabled_color = Color(0.847059, 0.870588, 0.92549, 0.768627)
-Button/colors/font_hover_color = Color(0.898039, 0.909804, 0.588235, 1)
+Button/colors/font_color = Color(0.85098, 0.717647, 0.12549, 1)
+Button/colors/font_disabled_color = Color(0.85098, 0.717647, 0.12549, 0.784314)
+Button/colors/font_focus_color = Color(0.85098, 0.717647, 0.12549, 1)
+Button/colors/font_hover_color = Color(0.956863, 0.345098, 0.0588235, 1)
 Button/colors/font_hover_pressed_color = Color(0.270588, 0.694118, 0.909804, 1)
-Button/colors/font_pressed_color = Color(0.367942, 0.742662, 0.434063, 1)
+Button/colors/font_pressed_color = Color(0.956863, 0.345098, 0.0588235, 1)
+Label/colors/font_color = Color(1, 0.960784, 0.784314, 1)
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("1_unjah")

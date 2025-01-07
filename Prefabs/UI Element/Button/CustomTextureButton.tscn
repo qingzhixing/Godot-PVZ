@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2wu8l2hxw6jj"]
+
+[ext_resource type="Script" path="res://Prefabs/UI Element/Button/CustomTextureButton.gd" id="1_i17fs"]
+[ext_resource type="AudioStream" uid="uid://b7lxbgcybflaq" path="res://Assets/SFX/UI/bleep.WAV" id="2_57pqa"]
+[ext_resource type="AudioStream" uid="uid://fe458hjhlpjk" path="res://Assets/SFX/UI/点击1_tap.WAV" id="3_w5tf5"]
+
+[node name="CustomTextureButton" type="TextureButton"]
+script = ExtResource("1_i17fs")
+hover_audio = ExtResource("2_57pqa")
+click_audio = ExtResource("3_w5tf5")
+pressed_position_delta = Vector2(1, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="button_down" from="." to="." method="on_button_down"]
+[connection signal="button_up" from="." to="." method="on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="on_pressed"]

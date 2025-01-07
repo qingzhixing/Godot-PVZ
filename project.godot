@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot-PVZ"
-run/main_scene="res://Scenes/Loading Scene/loading_scene.tscn"
+run/main_scene="res://Scenes/Loading Screen/loading_screen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Assets/Icon/icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://Assets/Icon/icon.svg"
 
 window/size/viewport_width=800
 window/size/viewport_height=600
+window/stretch/mode="canvas_items"
 
 [rendering]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://betkmlx7vgtal"
-path="res://.godot/imported/Achievements_pedestal.PNG-dcacaa255110b1723ffece5f6d2a19b9.ctex"
+uid="uid://cayxm654vv31g"
+path="res://.godot/imported/Sunflower_trophy_gold.PNG-6ceafb3d240f157f40d6b22143cc9762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/Achievements_pedestal/Achievements_pedestal.PNG"
-dest_files=["res://.godot/imported/Achievements_pedestal.PNG-dcacaa255110b1723ffece5f6d2a19b9.ctex"]
+source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/Sunflower_trophy_gold.PNG"
+dest_files=["res://.godot/imported/Sunflower_trophy_gold.PNG-6ceafb3d240f157f40d6b22143cc9762.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c41vje12ric6o"
-path="res://.godot/imported/Sunflower_trophy.PNG-e7c0347e56a24de1951fafa19112c0c5.ctex"
+uid="uid://3c4y1hvym630"
+path="res://.godot/imported/SelectorScreen_Mini_Games_button.PNG-99916197bbc3c4c1d4b9daa3af7596f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/images/Map_Elements/Sunflower_trophy.PNG"
-dest_files=["res://.godot/imported/Sunflower_trophy.PNG-e7c0347e56a24de1951fafa19112c0c5.ctex"]
+source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Mini_Games_button.PNG"
+dest_files=["res://.godot/imported/SelectorScreen_Mini_Games_button.PNG-99916197bbc3c4c1d4b9daa3af7596f4.ctex"]
 
 [params]
 

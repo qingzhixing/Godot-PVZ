@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds55kgowvkq7d"
-path="res://.godot/imported/SelectorScreen_Survival_highlight.PNG-7111651793b508a8ddfc52a8ad4fe7e0.ctex"
+uid="uid://betkmlx7vgtal"
+path="res://.godot/imported/Achievements_pedestal.PNG-db9303280236726f834f898c05b731cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_Survival_highlight.PNG"
-dest_files=["res://.godot/imported/SelectorScreen_Survival_highlight.PNG-7111651793b508a8ddfc52a8ad4fe7e0.ctex"]
+source_file="res://Assets/Sprites/UI_Texture/Selector_Screen/Achievements_pedestal.PNG"
+dest_files=["res://.godot/imported/Achievements_pedestal.PNG-db9303280236726f834f898c05b731cb.ctex"]
 
 [params]
 
