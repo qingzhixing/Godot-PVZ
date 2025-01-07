@@ -1,0 +1,45 @@
+[gd_scene load_steps=14 format=3 uid="uid://blnmh2nl5yc6p"]
+
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="1_1ey00"]
+[ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="1_b7wrc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7od4y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20j0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awafe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_207sh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s300j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjxd8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45ky1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fay1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbyb7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_457d8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tktw5"]
+
+[node name="ThemedButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("1_1ey00")
+theme_override_fonts/font = ExtResource("1_b7wrc")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7od4y")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_20j0u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_awafe")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_207sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_s300j")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_tjxd8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_45ky1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8fay1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cbyb7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_457d8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tktw5")
+text = "Button Text"

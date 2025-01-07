@@ -3,6 +3,7 @@ extends Node2D
 @onready var mask: Node2D = $CanvasGroup/Mask
 @onready var sod_roll_cap: Sprite2D = $SodRollCap
 @onready var roll_cap_animation: AnimationPlayer = $RollCapAnimation
+@onready var themed_button: Button = $ThemedButton
 
 @export var loading_time_seconds: float = 10;
 
@@ -23,6 +24,7 @@ func _ready() -> void:
 	mask.scale.x = 0;
 	mask.position.x = -mask.scale.x / 2;
 	sod_roll_cap.position.x = MIN_CAP_ROLL_X;
+	themed_button.disabled = true;
 	pass # Replace with function body.
 
 
@@ -40,4 +42,5 @@ func _process(delta: float) -> void:
 	# switch roll cap animation
 	if loaded_time >= loading_time_seconds:
 		roll_cap_animation.play("RESET");
+		themed_button.disabled = false;
 	pass

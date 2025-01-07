@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dso67pdub0nok"]
+[gd_scene load_steps=11 format=3 uid="uid://dso67pdub0nok"]
 
 [ext_resource type="Script" path="res://Prefabs/UI Element/LoadBar/load_bar.gd" id="1_wuj84"]
 [ext_resource type="Texture2D" uid="uid://btd4spao6anb3" path="res://Assets/Sprites/UI_Texture/LoadBar/LoadBar_dirt.PNG" id="2_0t45v"]
 [ext_resource type="Texture2D" uid="uid://bmcdm4yi5i1lb" path="res://Assets/Sprites/UI_Texture/LoadBar/LoadBar_grass.PNG" id="3_1sxfe"]
 [ext_resource type="Texture2D" uid="uid://duffwxxfoxllp" path="res://Assets/Sprites/images/Sod/Sod_Scroll/SodRollCap.PNG" id="4_2f4ar"]
+[ext_resource type="PackedScene" uid="uid://blnmh2nl5yc6p" path="res://Prefabs/UI Element/Button/ThemedButton.tscn" id="6_i8ih4"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7m1fr"]
 
@@ -78,3 +79,11 @@ libraries = {
 "": SubResource("AnimationLibrary_l7cl0")
 }
 autoplay = "RollCap"
+
+[node name="ThemedButton" parent="." instance=ExtResource("6_i8ih4")]
+offset_left = -88.0
+offset_top = 12.0
+offset_right = 78.0
+offset_bottom = 33.0
+text = "Click To Start
+"
