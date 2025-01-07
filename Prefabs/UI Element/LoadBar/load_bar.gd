@@ -14,9 +14,13 @@ extends Node2D
 @export_range(0, 1) var sprout2_progress: float;
 @export_range(0, 1) var sprout3_progress: float;
 
+@warning_ignore("unused_signal")
 signal sprout1_sprout;
+@warning_ignore("unused_signal")
 signal sprout2_sprout;
+@warning_ignore("unused_signal")
 signal sprout3_sprout;
+@warning_ignore("unused_signal")
 signal button_clicked;
 
 var sprout1_sprouted: bool = false;
