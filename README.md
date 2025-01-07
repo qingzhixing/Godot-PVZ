@@ -16,5 +16,5 @@ Godot之前用过 , 很舒服 , 给自己加油吧!
 
 💦 第一个Shader! 设置灰度为Alpha! 2025.1.7
 
-![static\My-First-Shader-2025.1.7.png](static\My-First-Shader-2025.1.7.png)
-![static\My-First-Shader-InGame-2025.1.7.png](static\My-First-Shader-InGame-2025.1.7.png)
+![static/My-First-Shader-2025.1.7.png](static/My-First-Shader-2025.1.7.png)
+![static/My-First-Shader-InGame-2025.1.7.png](static/My-First-Shader-InGame-2025.1.7.png)
