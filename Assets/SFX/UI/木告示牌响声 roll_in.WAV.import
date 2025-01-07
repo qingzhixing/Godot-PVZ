@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c7texxmvgh6ko"
-path="res://.godot/imported/roll_in.WAV-cd7397191aacd99955175c7513c7ca96.sample"
+path="res://.godot/imported/木告示牌响声 roll_in.WAV-2168967268ebccebcd487aa2929311f1.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/其他/roll_in.WAV"
-dest_files=["res://.godot/imported/roll_in.WAV-cd7397191aacd99955175c7513c7ca96.sample"]
+source_file="res://Assets/SFX/UI/木告示牌响声 roll_in.WAV"
+dest_files=["res://.godot/imported/木告示牌响声 roll_in.WAV-2168967268ebccebcd487aa2929311f1.sample"]
 
 [params]
 

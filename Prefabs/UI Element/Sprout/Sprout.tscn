@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://3t66tsn55xq8" path="res://Assets/Sprites/particles/Particles/dirt/DirtSmall/dirtsmall4.PNG" id="6_ftwke"]
 [ext_resource type="Texture2D" uid="uid://c3m0hl6t76miq" path="res://Assets/Sprites/particles/Particles/dirt/DirtSmall/dirtsmall5.PNG" id="7_33cqa"]
 [ext_resource type="Texture2D" uid="uid://cuvdd3deanw1q" path="res://Assets/Sprites/particles/Particles/dirt/DirtSmall/dirtsmall6.PNG" id="8_kkdju"]
-[ext_resource type="AudioStream" uid="uid://bstbsw23jxtr1" path="res://Assets/SFX/其他/shoop.WAV" id="10_1bqjg"]
+[ext_resource type="AudioStream" uid="uid://bgdgikbwwilj2" path="res://Assets/SFX/UI/加载条小花_loadingbar_flower.WAV" id="10_fjade"]
 
 [sub_resource type="Animation" id="Animation_loers"]
 resource_name = "Hide"
@@ -235,7 +235,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/9/path = NodePath("SFX:playing")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -247,7 +247,7 @@ tracks/9/keys = {
 
 [sub_resource type="Animation" id="Animation_tfvyr"]
 resource_name = "Sprout"
-length = 0.5
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -255,7 +255,7 @@ tracks/0/path = NodePath("sprout_body:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.266667),
+"times": PackedFloat32Array(0, 0.166667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -267,7 +267,7 @@ tracks/1/path = NodePath("sprout_petal:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.333333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -279,7 +279,7 @@ tracks/2/path = NodePath("sprout_petal2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.433333),
+"times": PackedFloat32Array(0, 0.266667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -291,7 +291,7 @@ tracks/3/path = NodePath("sprout_petal3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.466667),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -371,11 +371,11 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/10/path = NodePath("SFX:playing")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0.166667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -444,5 +444,5 @@ libraries = {
 "": SubResource("AnimationLibrary_w7w7d")
 }
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_1bqjg")
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_fjade")
