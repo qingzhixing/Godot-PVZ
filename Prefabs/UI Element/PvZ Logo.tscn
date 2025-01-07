@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://5grpjvjnxf23"]
+
+[ext_resource type="Shader" path="res://Scripts/Shaders/AlphaTexture.gdshader" id="1_bom05"]
+[ext_resource type="Texture2D" uid="uid://dt1ol2cprab34" path="res://Assets/Sprites/images/Logo/PvZ_Logo.PNG" id="2_igrio"]
+[ext_resource type="Texture2D" uid="uid://d1tsrilnbs6t6" path="res://Assets/Sprites/images/Logo/PvZ_Logo_.PNG" id="3_i8jev"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tcio6"]
+shader = ExtResource("1_bom05")
+shader_parameter/greyTexture = ExtResource("3_i8jev")
+
+[node name="PvZLogo" type="Node2D"]
+
+[node name="PvZ Logo" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tcio6")
+position = Vector2(160, -20)
+texture = ExtResource("2_igrio")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmcdm4yi5i1lb"
-path="res://.godot/imported/LoadBar_grass.PNG-6466f9a26175e855f9230432cc1381fd.ctex"
+uid="uid://btd4spao6anb3"
+path="res://.godot/imported/LoadBar_dirt.PNG-54b8296a8ea054eb665c250fc2f54564.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI_Texture/LoadBar/LoadBar_grass.PNG"
-dest_files=["res://.godot/imported/LoadBar_grass.PNG-6466f9a26175e855f9230432cc1381fd.ctex"]
+source_file="res://Assets/Sprites/UI_Texture/TitleScreen/LoadBar/LoadBar_dirt.PNG"
+dest_files=["res://.godot/imported/LoadBar_dirt.PNG-54b8296a8ea054eb665c250fc2f54564.ctex"]
 
 [params]
 

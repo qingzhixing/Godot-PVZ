@@ -10,6 +10,11 @@ Godot之前用过 , 很舒服 , 给自己加油吧!
 
 > 这样会让自己更有动力!
 
-Loading Bar Finished 2025.1.7
+🍕 Loading Bar Finished 2025.1.7
 
 ![./static/Loading_Bar_Finished-2025.1.7](./static/Loading_Bar_Finished-2025.1.7.gif)
+
+💦 第一个Shader! 设置灰度为Alpha! 2025.1.7
+
+![static\My-First-Shader-2025.1.7.png](static\My-First-Shader-2025.1.7.png)
+![static\My-First-Shader-InGame-2025.1.7.png](static\My-First-Shader-InGame-2025.1.7.png)

@@ -15,6 +15,11 @@ run/main_scene="res://Scenes/loading_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Assets/Icon/icon.svg"
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+
 [rendering]
 
 renderer/rendering_method="mobile"
