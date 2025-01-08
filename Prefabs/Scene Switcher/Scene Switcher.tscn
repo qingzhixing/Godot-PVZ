@@ -12,4 +12,4 @@ grow_vertical = 2
 script = ExtResource("1_1kwsx")
 
 [node name="SwitchTimer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.1

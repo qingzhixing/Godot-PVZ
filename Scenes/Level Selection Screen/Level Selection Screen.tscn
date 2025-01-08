@@ -56,3 +56,5 @@ offset_left = 334.0
 offset_top = -36.0
 offset_right = 334.0
 offset_bottom = -36.0
+
+[connection signal="pressed" from="Back To Menu Button" to="." method="on_back_to_menu_button_pressed"]
