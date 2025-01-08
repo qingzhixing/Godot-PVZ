@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://de5wc4s8ea7du"]
+
+[ext_resource type="Script" path="res://Prefabs/UI Element/Level Window/level_window.gd" id="1_kive0"]
+[ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="1_ox47j"]
+[ext_resource type="Texture2D" uid="uid://diladr7q3xxw4" path="res://Assets/Sprites/images/Challenging/Challenge_Window.PNG" id="2_ilq1q"]
+[ext_resource type="Texture2D" uid="uid://rr3mf1mimdm1" path="res://Assets/Sprites/images/Challenging/Challenge_Window_Highlight.PNG" id="3_gnvw8"]
+[ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="4_q0n1n"]
+[ext_resource type="Texture2D" uid="uid://c37nmjfegwe7p" path="res://Assets/Sprites/UI_Texture/MiniGame_trophy.PNG" id="5_s7mkq"]
+
+[node name="Level Window" type="Node2D"]
+script = ExtResource("1_kive0")
+level_passed = true
+
+[node name="Level Window Button" parent="." instance=ExtResource("1_ox47j")]
+offset_left = -59.0
+offset_top = -122.0
+offset_right = 59.0
+offset_bottom = -2.0
+texture_normal = ExtResource("2_ilq1q")
+texture_pressed = ExtResource("3_gnvw8")
+texture_hover = ExtResource("3_gnvw8")
+click_audio = ExtResource("4_q0n1n")
+
+[node name="Level Trophy" type="Sprite2D" parent="Level Window Button"]
+position = Vector2(37, 36)
+texture = ExtResource("5_s7mkq")

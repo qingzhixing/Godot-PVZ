@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btkbkfx866ego"
+path="res://.godot/imported/通关结算 禅境花园 ZenGarden.ogg-7216ccb23ce8cf087c3dd3fc3f6a1e4c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Music/通关结算 禅境花园 ZenGarden.ogg"
+dest_files=["res://.godot/imported/通关结算 禅境花园 ZenGarden.ogg-7216ccb23ce8cf087c3dd3fc3f6a1e4c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

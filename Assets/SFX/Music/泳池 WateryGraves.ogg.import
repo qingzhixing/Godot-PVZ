@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvsyporjguos3"
+path="res://.godot/imported/泳池 WateryGraves.ogg-436eb62ea059e860759cf1f7c6ac994e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Music/泳池 WateryGraves.ogg"
+dest_files=["res://.godot/imported/泳池 WateryGraves.ogg-436eb62ea059e860759cf1f7c6ac994e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

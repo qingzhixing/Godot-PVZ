@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cu1e17vk6he34"
+path="res://.godot/imported/夜晚小游戏 Cerebrawl.ogg-cae35afdf44eed5a4eb1941008c42702.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Music/夜晚小游戏 Cerebrawl.ogg"
+dest_files=["res://.godot/imported/夜晚小游戏 Cerebrawl.ogg-cae35afdf44eed5a4eb1941008c42702.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

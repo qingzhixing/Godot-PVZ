@@ -1,0 +1,40 @@
+[gd_scene load_steps=15 format=3 uid="uid://qdsvbn6n4li4"]
+
+[ext_resource type="Script" path="res://Prefabs/Music Controller/music_controller.gd" id="1_lsgay"]
+[ext_resource type="AudioStream" uid="uid://dtiijvxia1qj4" path="res://Assets/SFX/Music/BrainiacManiac.ogg" id="2_0hvn7"]
+[ext_resource type="AudioStream" uid="uid://h8pmt4ro13qg" path="res://Assets/SFX/Music/Loonboon.ogg" id="3_fl4rs"]
+[ext_resource type="AudioStream" uid="uid://bu7l0mb0kfb6i" path="res://Assets/SFX/Music/UltimateBattle.ogg" id="4_ut245"]
+[ext_resource type="AudioStream" uid="uid://cpkdc2uv1lmb0" path="res://Assets/SFX/Music/ZombiesOnYourLawn.ogg" id="5_f7ar0"]
+[ext_resource type="AudioStream" uid="uid://bxsjv411eqjjd" path="res://Assets/SFX/Music/白天 Grasswalk.ogg" id="6_8w6ob"]
+[ext_resource type="AudioStream" uid="uid://cqrs27hgef6wu" path="res://Assets/SFX/Music/浓雾 RigorMormist.ogg" id="7_u12xw"]
+[ext_resource type="AudioStream" uid="uid://btkbkfx866ego" path="res://Assets/SFX/Music/通关结算 禅境花园 ZenGarden.ogg" id="8_c5xky"]
+[ext_resource type="AudioStream" uid="uid://dy74ifogr1lw0" path="res://Assets/SFX/Music/屋顶 GrazeTheRoof.ogg" id="9_6qwkn"]
+[ext_resource type="AudioStream" uid="uid://cw8xsf10ijyuh" path="res://Assets/SFX/Music/选卡界面 ChooseYourSeeds.ogg" id="10_lqwla"]
+[ext_resource type="AudioStream" uid="uid://dmmj6wvbkamt5" path="res://Assets/SFX/Music/夜晚 Moongrains.ogg" id="11_1lnyr"]
+[ext_resource type="AudioStream" uid="uid://cu1e17vk6he34" path="res://Assets/SFX/Music/夜晚小游戏 Cerebrawl.ogg" id="12_ifk1v"]
+[ext_resource type="AudioStream" uid="uid://cvsyporjguos3" path="res://Assets/SFX/Music/泳池 WateryGraves.ogg" id="13_2o26i"]
+[ext_resource type="AudioStream" uid="uid://b2q4aay8e8mu3" path="res://Assets/SFX/Music/主菜单音乐 Crazy Dave.ogg" id="14_ddku7"]
+
+[node name="MusicController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lsgay")
+music_BrainiacManiac = ExtResource("2_0hvn7")
+music_Loonboon = ExtResource("3_fl4rs")
+music_UltimateBattle = ExtResource("4_ut245")
+music_ZombiesOnYourLawn = ExtResource("5_f7ar0")
+music_Grasswalk = ExtResource("6_8w6ob")
+music_RigorMormist = ExtResource("7_u12xw")
+music_ZenGarden = ExtResource("8_c5xky")
+music_GrazeTheRoof = ExtResource("9_6qwkn")
+music_ChooseYourSeeds = ExtResource("10_lqwla")
+music_Moongrains = ExtResource("11_1lnyr")
+music_Cerebrawl = ExtResource("12_ifk1v")
+music_WateryGraves = ExtResource("13_2o26i")
+music_Crazy_Dave = ExtResource("14_ddku7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

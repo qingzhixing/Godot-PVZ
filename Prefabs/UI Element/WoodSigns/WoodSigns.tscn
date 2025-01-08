@@ -181,9 +181,9 @@ texture = ExtResource("2_gqivj")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -121.0
-offset_top = -188.0
+offset_top = -412.0
 offset_right = 116.0
-offset_bottom = -167.0
+offset_bottom = -391.0
 theme = ExtResource("9_uay8o")
 text = "QingzhiStar!"
 horizontal_alignment = 1
@@ -192,9 +192,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WoodSign_change_user" parent="." instance=ExtResource("3_6c56k")]
 offset_left = -153.0
-offset_top = -140.0
+offset_top = -368.0
 offset_right = 138.0
-offset_bottom = -72.0
+offset_bottom = -300.0
 texture_normal = ExtResource("4_01whn")
 texture_pressed = ExtResource("4_01whn")
 texture_hover = ExtResource("5_e50mt")
@@ -203,9 +203,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WoodSign_zombatar" parent="." instance=ExtResource("3_6c56k")]
 offset_left = -147.0
-offset_top = -82.0
+offset_top = -310.0
 offset_right = 132.0
-offset_bottom = 1.0
+offset_bottom = -227.0
 texture_normal = ExtResource("6_nbd4o")
 texture_pressed = ExtResource("6_nbd4o")
 texture_hover = ExtResource("7_gttop")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://djvmdkbalnkgn"]
+[gd_scene load_steps=5 format=3 uid="uid://bg8enuqhpe78t"]
 
 [ext_resource type="Script" path="res://Scenes/Loading Screen/loading_screen.gd" id="1_7ggxk"]
 [ext_resource type="Texture2D" uid="uid://cqdrfp71q277j" path="res://Assets/Sprites/UI_Texture/TitleScreen/titlescreen.PNG" id="2_n7x85"]
@@ -23,8 +23,4 @@ position = Vector2(0, -264)
 [node name="PvZLogo" parent="." instance=ExtResource("4_wc3jv")]
 position = Vector2(-165, -456)
 
-[node name="SwitchTimer" type="Timer" parent="."]
-wait_time = 0.1
-
 [connection signal="button_clicked" from="LoadBar" to="." method="on_button_clicked"]
-[connection signal="timeout" from="SwitchTimer" to="." method="switch"]

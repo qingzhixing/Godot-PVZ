@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckqpl1natoe6m"
+path="res://.godot/imported/日文版Sunflower UraniwaNiZombiesGa.ogg-cc9e52c24d8fad7274c23fefc41302ce.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Music/日文版Sunflower UraniwaNiZombiesGa.ogg"
+dest_files=["res://.godot/imported/日文版Sunflower UraniwaNiZombiesGa.ogg-cc9e52c24d8fad7274c23fefc41302ce.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

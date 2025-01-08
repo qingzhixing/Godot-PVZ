@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgbd2xehwh67a"
+path="res://.godot/imported/未发布 Zombotany.ogg-5ad611bb70ce572075a8a13cafb2eff6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Music/未发布 Zombotany.ogg"
+dest_files=["res://.godot/imported/未发布 Zombotany.ogg-5ad611bb70ce572075a8a13cafb2eff6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://caxnjaqd2rs6j"]
+
+[ext_resource type="Script" path="res://Scenes/Level Selection Screen/level_selection_screen.gd" id="1_5y2sf"]
+[ext_resource type="Texture2D" uid="uid://cowxxnfuamp04" path="res://Assets/Sprites/images/Challenging/Challenge_Background.PNG" id="1_ksgs8"]
+[ext_resource type="PackedScene" uid="uid://de5wc4s8ea7du" path="res://Prefabs/UI Element/Level Window/Level Window.tscn" id="2_414np"]
+[ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="3_d3edt"]
+[ext_resource type="Texture2D" uid="uid://6oj0x1ovkngh" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button2.PNG" id="4_vb75c"]
+[ext_resource type="Texture2D" uid="uid://bx7fjdeqf7cob" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button2_Glow.PNG" id="5_iojjs"]
+[ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="6_11tc2"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="7_rhwvg"]
+
+[node name="Level Selection Screen" type="Node2D"]
+script = ExtResource("1_5y2sf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, -300)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-2, -300)
+texture = ExtResource("1_ksgs8")
+
+[node name="LevelWindow" parent="." instance=ExtResource("2_414np")]
+position = Vector2(-308, -371)
+
+[node name="Back To Menu Button" parent="." instance=ExtResource("3_d3edt")]
+offset_left = -383.0
+offset_top = -33.0
+offset_right = -272.0
+offset_bottom = -7.0
+texture_normal = ExtResource("4_vb75c")
+texture_pressed = ExtResource("5_iojjs")
+texture_hover = ExtResource("5_iojjs")
+click_audio = ExtResource("6_11tc2")
+
+[node name="Back To Menu Text" type="Label" parent="Back To Menu Button"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 222.0
+offset_bottom = 51.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_rhwvg")
+theme_override_colors/font_color = Color(0.164706, 0.164706, 0.352941, 1)
+theme_override_font_sizes/font_size = 25
+text = "Back to Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CustomTextureButton2" parent="." instance=ExtResource("3_d3edt")]
+offset_left = 174.0
+offset_top = -52.0
+offset_right = 174.0
+offset_bottom = -52.0
+
+[node name="CustomTextureButton3" parent="." instance=ExtResource("3_d3edt")]
+offset_left = 334.0
+offset_top = -36.0
+offset_right = 334.0
+offset_bottom = -36.0

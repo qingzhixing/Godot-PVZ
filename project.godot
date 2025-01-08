@@ -15,6 +15,11 @@ run/main_scene="res://Scenes/Loading Screen/loading_screen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Assets/Icon/icon.svg"
 
+[autoload]
+
+MusicController="*res://Prefabs/Music Controller/Music Controller.tscn"
+SceneSwitcher="*res://Prefabs/Scene Switcher/Scene Switcher.tscn"
+
 [display]
 
 window/size/viewport_width=800

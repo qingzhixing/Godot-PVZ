@@ -2,7 +2,11 @@ extends Node2D
 @onready var label: Label = $Label
 
 @export var lableText: String = "QingzhiStar!"
+
+@warning_ignore("unused_signal")
 signal change_user_pressed;
+
+@warning_ignore("unused_signal")
 signal zombatar_pressed;
 
 var text_need_update = false;

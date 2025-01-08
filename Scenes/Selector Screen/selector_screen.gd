@@ -1,7 +1,10 @@
 extends Node2D
-@onready var switch_timer: Timer = $SwitchTimer
 
+func _ready():
+	MusicController.play_stream(MusicController.music_Crazy_Dave);
+	
 func on_adventure_button_pressed() -> void:
+	SceneSwitcher.jump_to_scene("res://Scenes/Level Selection Screen/Level Selection Screen.tscn");
 	pass # Replace with function body.
 
 
@@ -24,13 +27,9 @@ func on_almanac_pressed() -> void:
 func on_zen_garden_pressed() -> void:
 	pass # Replace with function body.
 
-func quit_game() -> void:
-	get_tree().quit()
-
 func on_quit_pressed() -> void:
-	switch_timer.connect("timeout", quit_game);
-	print("Quitting game in 0.3 seconds...")
-	switch_timer.start()
+	print("Quitting...")
+	SceneSwitcher.delay_call(get_tree().quit)
 	pass # Replace with function body.
 
 

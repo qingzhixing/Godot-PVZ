@@ -3,6 +3,7 @@ extends Button
 
 @export var tap_audio: Array[AudioStream];
 
+@warning_ignore("unused_signal")
 signal button_click_out_handler;
 
 func on_pressed() -> void:
