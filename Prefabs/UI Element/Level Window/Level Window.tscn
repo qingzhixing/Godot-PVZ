@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://diladr7q3xxw4" path="res://Assets/Sprites/images/Challenging/Challenge_Window.PNG" id="2_ilq1q"]
 [ext_resource type="Texture2D" uid="uid://rr3mf1mimdm1" path="res://Assets/Sprites/images/Challenging/Challenge_Window_Highlight.PNG" id="3_gnvw8"]
 [ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="4_q0n1n"]
-[ext_resource type="Texture2D" uid="uid://c37nmjfegwe7p" path="res://Assets/Sprites/UI_Texture/MiniGame_trophy.PNG" id="5_s7mkq"]
+[ext_resource type="Texture2D" uid="uid://c37nmjfegwe7p" path="res://Assets/Sprites/images/Challenging/MiniGame_trophy.PNG" id="5_s7mkq"]
 
 [node name="Level Window" type="Node2D"]
 script = ExtResource("1_kive0")
