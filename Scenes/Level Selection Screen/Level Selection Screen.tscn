@@ -19,9 +19,6 @@ position = Vector2(-2, -300)
 position = Vector2(-2, -300)
 texture = ExtResource("1_ksgs8")
 
-[node name="LevelWindow" parent="." instance=ExtResource("2_414np")]
-position = Vector2(-308, -371)
-
 [node name="Back To Menu Button" parent="." instance=ExtResource("3_d3edt")]
 offset_left = -383.0
 offset_top = -33.0
@@ -45,16 +42,10 @@ text = "Back to Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CustomTextureButton2" parent="." instance=ExtResource("3_d3edt")]
-offset_left = 174.0
-offset_top = -52.0
-offset_right = 174.0
-offset_bottom = -52.0
+[node name="Levels" type="Node2D" parent="."]
 
-[node name="CustomTextureButton3" parent="." instance=ExtResource("3_d3edt")]
-offset_left = 334.0
-offset_top = -36.0
-offset_right = 334.0
-offset_bottom = -36.0
+[node name="Level Window 1" parent="Levels" instance=ExtResource("2_414np")]
+position = Vector2(-308, -371)
 
 [connection signal="pressed" from="Back To Menu Button" to="." method="on_back_to_menu_button_pressed"]
+[connection signal="level_window_button_pressed" from="Levels/Level Window 1" to="." method="on_level_window_button_pressed"]
