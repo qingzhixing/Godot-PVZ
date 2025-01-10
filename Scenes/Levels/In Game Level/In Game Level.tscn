@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://clln526f2evrg"]
+[gd_scene load_steps=15 format=3 uid="uid://clln526f2evrg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/In Game Level/in_game_level.gd" id="1_7qlqi"]
 [ext_resource type="Texture2D" uid="uid://bb22yujk6vn6k" path="res://Assets/Sprites/images/backgrounds/background1.PNG" id="1_ahrkr"]
@@ -6,38 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cmwfvgflfs50n" path="res://Assets/Sprites/images/backgrounds/background1_gameover_mask.PNG" id="3_gy1mr"]
 [ext_resource type="Texture2D" uid="uid://bbr2rl3bqor88" path="res://Assets/Sprites/UI_Texture/SeedBank.PNG" id="5_ia30w"]
 [ext_resource type="Texture2D" uid="uid://b3novdtv2x7d1" path="res://Assets/Sprites/UI_Texture/coinbank.PNG" id="6_ou0s8"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="7_yoicx"]
+[ext_resource type="Texture2D" uid="uid://37whl41l4ko6" path="res://Assets/Sprites/images/item/Shovel/ShovelBank.PNG" id="8_sk5re"]
+[ext_resource type="Texture2D" uid="uid://d34vo51wp27nr" path="res://Assets/Sprites/images/item/Shovel/Shovel.PNG" id="9_q0u8d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f1rj5"]
-
-[sub_resource type="Animation" id="Animation_2ky23"]
-resource_name = "camera_go_right"
-length = 1.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.3),
-"transitions": PackedFloat32Array(-2, 1),
-"update": 0,
-"values": [Vector2(-300, 0), Vector2(300, 0)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"on_camera_go_right_finished"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_5p3r0"]
 length = 0.001
@@ -84,6 +57,36 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_2ky23"]
+resource_name = "camera_go_right"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(-300, 0), Vector2(300, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_camera_go_right_finished"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qkbor"]
 _data = {
 "RESET": SubResource("Animation_5p3r0"),
@@ -119,9 +122,31 @@ libraries = {
 }
 
 [node name="SeedBank" type="Sprite2D" parent="."]
-position = Vector2(-251, -240)
+position = Vector2(-216, -258)
 texture = ExtResource("5_ia30w")
 
 [node name="Coinbank" type="Sprite2D" parent="."]
-position = Vector2(-390, 272)
+position = Vector2(-367, 280)
 texture = ExtResource("6_ou0s8")
+
+[node name="Level Info" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 275.0
+offset_right = 105.0
+offset_bottom = 300.0
+theme = ExtResource("7_yoicx")
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 22
+text = "Level: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shovel" type="Node2D" parent="."]
+
+[node name="Shovel Bank" type="Sprite2D" parent="Shovel"]
+position = Vector2(49, -258)
+texture = ExtResource("8_sk5re")
+
+[node name="Shovel Item" type="Sprite2D" parent="Shovel"]
+position = Vector2(48, -257)
+texture = ExtResource("9_q0u8d")

@@ -10,5 +10,6 @@ func on_back_to_menu_button_pressed() -> void:
 
 func on_level_window_button_pressed(level_id: int) -> void:
 	print("Level " + str(level_id) + " selected");
-	
+	SceneSwitcher.current_level = level_id;
+	SceneSwitcher.jump_to_scene("res://Scenes/Levels/In Game Level/In Game Level.tscn")
 	pass # Replace with function body.

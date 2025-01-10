@@ -1,6 +1,7 @@
 extends Control
 @onready var switch_timer: Timer = $SwitchTimer
-var last_callback: Callable = func():;
+var last_callback: Callable = func(): ;
+var current_level: int = -1;
 
 func _ready() -> void:
 	switch_timer.one_shot = true;

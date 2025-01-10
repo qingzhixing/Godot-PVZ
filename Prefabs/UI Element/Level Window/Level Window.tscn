@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://de5wc4s8ea7du"]
+[gd_scene load_steps=9 format=3 uid="uid://de5wc4s8ea7du"]
 
 [ext_resource type="Script" path="res://Prefabs/UI Element/Level Window/level_window.gd" id="1_kive0"]
 [ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="1_ox47j"]
@@ -7,12 +7,14 @@
 [ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="4_q0n1n"]
 [ext_resource type="Texture2D" uid="uid://c37nmjfegwe7p" path="res://Assets/Sprites/images/Challenging/MiniGame_trophy.PNG" id="5_s7mkq"]
 [ext_resource type="Texture2D" uid="uid://ceakm1ad53e22" path="res://Assets/Sprites/images/Challenging/Challenge_Thumbnails/Wall-nut Bowling.PNG" id="6_dufl5"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="8_744e2"]
 
 [node name="Level Window" type="Node2D"]
 script = ExtResource("1_kive0")
 level_passed = true
 
 [node name="Level Window Button" parent="." instance=ExtResource("1_ox47j")]
+z_index = 1
 offset_left = -59.0
 offset_top = -122.0
 offset_right = 59.0
@@ -23,12 +25,24 @@ texture_hover = ExtResource("3_gnvw8")
 click_audio = ExtResource("4_q0n1n")
 
 [node name="Level Image" type="Sprite2D" parent="Level Window Button"]
-z_index = -2
+z_index = -1
 position = Vector2(59, 37)
 texture = ExtResource("6_dufl5")
 
 [node name="Level Trophy" type="Sprite2D" parent="Level Window Button"]
 position = Vector2(37, 36)
 texture = ExtResource("5_s7mkq")
+
+[node name="Level Info" type="Label" parent="Level Window Button"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 76.0
+offset_right = 106.0
+offset_bottom = 109.0
+theme = ExtResource("8_744e2")
+theme_override_colors/font_color = Color(0.164706, 0.164706, 0.352941, 1)
+text = "Level Name"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Level Window Button" to="." method="on_level_window_button_pressed"]

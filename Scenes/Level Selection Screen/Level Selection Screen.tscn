@@ -46,6 +46,7 @@ vertical_alignment = 1
 
 [node name="Level Window 1" parent="Levels" instance=ExtResource("2_414np")]
 position = Vector2(-308, -371)
+level_id = 1
 
 [connection signal="pressed" from="Back To Menu Button" to="." method="on_back_to_menu_button_pressed"]
 [connection signal="level_window_button_pressed" from="Levels/Level Window 1" to="." method="on_level_window_button_pressed"]
