@@ -1,15 +1,24 @@
-[gd_scene load_steps=16 format=3 uid="uid://clln526f2evrg"]
+[gd_scene load_steps=25 format=3 uid="uid://clln526f2evrg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/In Game Level/in_game_level.gd" id="1_7qlqi"]
 [ext_resource type="Texture2D" uid="uid://bb22yujk6vn6k" path="res://Assets/Sprites/images/backgrounds/background1.PNG" id="1_ahrkr"]
 [ext_resource type="Texture2D" uid="uid://v8h42cknnmlr" path="res://Assets/Sprites/images/backgrounds/background1_gameover_interior_overlay.PNG" id="2_m224f"]
 [ext_resource type="Texture2D" uid="uid://cmwfvgflfs50n" path="res://Assets/Sprites/images/backgrounds/background1_gameover_mask.PNG" id="3_gy1mr"]
-[ext_resource type="Texture2D" uid="uid://bbr2rl3bqor88" path="res://Assets/Sprites/UI_Texture/SeedBank.PNG" id="5_ia30w"]
-[ext_resource type="Texture2D" uid="uid://b3novdtv2x7d1" path="res://Assets/Sprites/UI_Texture/coinbank.PNG" id="6_ou0s8"]
+[ext_resource type="PackedScene" uid="uid://coswiqiv0ifdf" path="res://Prefabs/UI Element/Seed Bank/seed_bank.tscn" id="5_5jaqr"]
+[ext_resource type="PackedScene" uid="uid://b40y7u62gui5m" path="res://Prefabs/UI Element/Shovel Bank/shovel.tscn" id="6_wl6mk"]
 [ext_resource type="FontFile" uid="uid://o0ho5a4b7eyd" path="res://Assets/Fonts/continuum 一代数字/contb.ttf" id="7_gygll"]
+[ext_resource type="PackedScene" uid="uid://ccp04vcqo1bm5" path="res://Prefabs/UI Element/Coin Bank/coin_bank.tscn" id="7_pt61s"]
 [ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="7_yoicx"]
-[ext_resource type="Texture2D" uid="uid://37whl41l4ko6" path="res://Assets/Sprites/images/item/Shovel/ShovelBank.PNG" id="8_sk5re"]
-[ext_resource type="Texture2D" uid="uid://d34vo51wp27nr" path="res://Assets/Sprites/images/item/Shovel/Shovel.PNG" id="9_q0u8d"]
+[ext_resource type="Texture2D" uid="uid://cedbtsfo3h6o4" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Background.PNG" id="10_gp8v1"]
+[ext_resource type="PackedScene" uid="uid://bmtjdxmss3d0f" path="res://Prefabs/UI Element/Game Themed Button/game_themed_button.tscn" id="10_wucf5"]
+[ext_resource type="Texture2D" uid="uid://4wldp4eyv4hr" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_ImitaterAddOn.PNG" id="11_4nx5x"]
+[ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="12_oa06o"]
+[ext_resource type="Texture2D" uid="uid://dilctifd31uhe" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button.PNG" id="13_0ny5i"]
+[ext_resource type="Texture2D" uid="uid://b4v7fwkeijy1n" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button_Disabled.PNG" id="14_7hrmt"]
+[ext_resource type="Texture2D" uid="uid://cs5dh0dmx44w" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button_Glow.PNG" id="15_xfrv5"]
+[ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="16_313hx"]
+[ext_resource type="Texture2D" uid="uid://6oj0x1ovkngh" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button2.PNG" id="17_5nmhm"]
+[ext_resource type="Texture2D" uid="uid://bx7fjdeqf7cob" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button2_Glow.PNG" id="18_3wsgf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f1rj5"]
 
@@ -124,81 +133,19 @@ libraries = {
 
 [node name="In Game UI" type="CanvasLayer" parent="."]
 
-[node name="Seed Band" type="Control" parent="In Game UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 800.0
-offset_bottom = 600.0
+[node name="Seed Bank" parent="In Game UI" instance=ExtResource("5_5jaqr")]
+offset_left = 11.0
+offset_right = 457.0
 
-[node name="Seed Bank BG" type="TextureRect" parent="In Game UI/Seed Band"]
-layout_mode = 0
-offset_left = 10.0
-offset_right = 456.0
-offset_bottom = 87.0
-texture = ExtResource("5_ia30w")
-
-[node name="Sun Text" type="Label" parent="In Game UI/Seed Band"]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 61.0
-offset_right = 77.0
-offset_bottom = 84.0
-theme = ExtResource("7_yoicx")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_gygll")
-theme_override_font_sizes/font_size = 17
-text = "50"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Shovel" type="Control" parent="In Game UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 800.0
-offset_bottom = 600.0
-
-[node name="Shovel Bank" type="TextureRect" parent="In Game UI/Shovel"]
-layout_mode = 0
-offset_left = 461.0
-offset_top = 5.0
-offset_right = 531.0
-offset_bottom = 77.0
-texture = ExtResource("8_sk5re")
-
-[node name="Shovel Item" type="TextureRect" parent="In Game UI/Shovel"]
-layout_mode = 0
+[node name="Shovel" parent="In Game UI" instance=ExtResource("6_wl6mk")]
 offset_left = 456.0
-offset_right = 536.0
-offset_bottom = 80.0
-texture = ExtResource("9_q0u8d")
+offset_right = 456.0
 
-[node name="Coin Bank" type="Control" parent="In Game UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 800.0
-offset_bottom = 599.0
-
-[node name="Coin Bank BG" type="TextureRect" parent="In Game UI/Coin Bank"]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 559.0
-offset_right = 190.0
-offset_bottom = 599.0
-texture = ExtResource("6_ou0s8")
-
-[node name="Coin Text" type="Label" parent="In Game UI/Coin Bank"]
-layout_mode = 0
-offset_left = 99.0
-offset_top = 566.0
-offset_right = 190.0
-offset_bottom = 599.0
-theme = ExtResource("7_yoicx")
-theme_override_colors/font_color = Color(0.701961, 0.988235, 0.34902, 1)
-theme_override_fonts/font = ExtResource("7_gygll")
-theme_override_font_sizes/font_size = 17
-text = "$114,514"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Coin Bank" parent="In Game UI" instance=ExtResource("7_pt61s")]
+offset_left = 64.0
+offset_top = 560.0
+offset_right = 192.0
+offset_bottom = 600.0
 
 [node name="Level Info" type="Label" parent="In Game UI"]
 offset_left = 700.0
@@ -213,3 +160,124 @@ theme_override_font_sizes/font_size = 22
 text = "Level: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Menu" parent="In Game UI" instance=ExtResource("10_wucf5")]
+offset_left = 666.0
+offset_right = 786.0
+
+[node name="Seed Chooser UI" type="CanvasLayer" parent="."]
+
+[node name="Seed Bank" parent="Seed Chooser UI" instance=ExtResource("5_5jaqr")]
+
+[node name="Seed Chooser" type="Control" parent="Seed Chooser UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG" type="TextureRect" parent="Seed Chooser UI/Seed Chooser"]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 465.0
+offset_bottom = 600.0
+texture = ExtResource("10_gp8v1")
+
+[node name="ImitaterAddOn" type="TextureRect" parent="Seed Chooser UI/Seed Chooser"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 501.0
+offset_right = 526.0
+offset_bottom = 594.0
+texture = ExtResource("11_4nx5x")
+
+[node name="Button Start" parent="Seed Chooser UI/Seed Chooser" instance=ExtResource("12_oa06o")]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 543.0
+offset_right = 312.0
+offset_bottom = 585.0
+texture_normal = ExtResource("13_0ny5i")
+texture_pressed = ExtResource("13_0ny5i")
+texture_hover = ExtResource("13_0ny5i")
+texture_disabled = ExtResource("14_7hrmt")
+texture_focused = ExtResource("13_0ny5i")
+hover_audio = null
+
+[node name="Button Start Hover Glow" type="TextureRect" parent="Seed Chooser UI/Seed Chooser/Button Start"]
+visible = false
+layout_mode = 0
+offset_right = 156.0
+offset_bottom = 42.0
+texture = ExtResource("15_xfrv5")
+
+[node name="Button Start Text" type="Label" parent="Seed Chooser UI/Seed Chooser/Button Start"]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 72.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_yoicx")
+theme_override_fonts/font = ExtResource("16_313hx")
+theme_override_font_sizes/font_size = 40
+text = "LET's ROCK!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ALMANAC" parent="Seed Chooser UI/Seed Chooser" instance=ExtResource("12_oa06o")]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 571.0
+offset_right = 669.0
+offset_bottom = 597.0
+texture_normal = ExtResource("17_5nmhm")
+texture_pressed = ExtResource("17_5nmhm")
+texture_hover = ExtResource("18_3wsgf")
+hover_audio = null
+
+[node name="ALMANAC Text" type="Label" parent="Seed Chooser UI/Seed Chooser/ALMANAC"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 214.0
+offset_bottom = 46.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_yoicx")
+theme_override_colors/font_color = Color(0.164706, 0.164706, 0.352941, 1)
+theme_override_font_sizes/font_size = 29
+text = "ALMANAC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SHOP" parent="Seed Chooser UI/Seed Chooser" instance=ExtResource("12_oa06o")]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 571.0
+offset_right = 791.0
+offset_bottom = 597.0
+texture_normal = ExtResource("17_5nmhm")
+texture_pressed = ExtResource("17_5nmhm")
+texture_hover = ExtResource("18_3wsgf")
+hover_audio = null
+
+[node name="SHOP Text" type="Label" parent="Seed Chooser UI/Seed Chooser/SHOP"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 214.0
+offset_bottom = 46.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_yoicx")
+theme_override_colors/font_color = Color(0.164706, 0.164706, 0.352941, 1)
+theme_override_font_sizes/font_size = 29
+text = "SHOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" parent="Seed Chooser UI" instance=ExtResource("10_wucf5")]
+offset_left = 666.0
+offset_right = 786.0
+
+[connection signal="button_clicked" from="In Game UI/Menu" to="." method="on_menu_button_clicked"]
+[connection signal="mouse_entered" from="Seed Chooser UI/Seed Chooser/Button Start" to="Seed Chooser UI/Seed Chooser/Button Start/Button Start Hover Glow" method="show"]
+[connection signal="mouse_exited" from="Seed Chooser UI/Seed Chooser/Button Start" to="Seed Chooser UI/Seed Chooser/Button Start/Button Start Hover Glow" method="hide"]
+[connection signal="pressed" from="Seed Chooser UI/Seed Chooser/Button Start" to="." method="on_seed_chosen"]
+[connection signal="button_clicked" from="Seed Chooser UI/Menu" to="." method="on_menu_button_clicked"]

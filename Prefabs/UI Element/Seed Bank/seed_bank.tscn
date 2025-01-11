@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://coswiqiv0ifdf"]
+
+[ext_resource type="Texture2D" uid="uid://bbr2rl3bqor88" path="res://Assets/Sprites/UI_Texture/SeedBank.PNG" id="1_brnfo"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="2_rbivl"]
+[ext_resource type="FontFile" uid="uid://o0ho5a4b7eyd" path="res://Assets/Fonts/continuum 一代数字/contb.ttf" id="3_3luoq"]
+
+[node name="Seed Bank" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 446.0
+offset_bottom = 87.0
+
+[node name="Seed Bank BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 446.0
+offset_bottom = 87.0
+texture = ExtResource("1_brnfo")
+
+[node name="Sun Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 61.0
+offset_right = 67.0
+offset_bottom = 84.0
+theme = ExtResource("2_rbivl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3luoq")
+theme_override_font_sizes/font_size = 17
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1

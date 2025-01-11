@@ -11,6 +11,7 @@ var in_animation: bool = false;
 
 func _ready() -> void:
 	if enable_mask:
+		print("Mask Enabled,masking...");
 		texture_click_mask = BitMap.new();
 		texture_click_mask.create_from_image_alpha(texture_normal.get_image());
 

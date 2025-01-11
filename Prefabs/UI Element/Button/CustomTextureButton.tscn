@@ -5,6 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://fe458hjhlpjk" path="res://Assets/SFX/UI/点击1_tap.WAV" id="3_w5tf5"]
 
 [node name="CustomTextureButton" type="TextureButton"]
+offset_right = 62.0
+offset_bottom = 31.0
 script = ExtResource("1_i17fs")
 hover_audio = ExtResource("2_57pqa")
 click_audio = ExtResource("3_w5tf5")

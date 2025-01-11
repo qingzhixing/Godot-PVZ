@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b40y7u62gui5m"]
+
+[ext_resource type="Texture2D" uid="uid://37whl41l4ko6" path="res://Assets/Sprites/images/item/Shovel/ShovelBank.PNG" id="1_yaahs"]
+[ext_resource type="Texture2D" uid="uid://d34vo51wp27nr" path="res://Assets/Sprites/images/item/Shovel/Shovel.PNG" id="2_n0ags"]
+
+[node name="Shovel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Shovel Bank" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 72.0
+texture = ExtResource("1_yaahs")
+
+[node name="Shovel Item" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("2_n0ags")
