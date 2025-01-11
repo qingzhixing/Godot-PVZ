@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://clln526f2evrg"]
+[gd_scene load_steps=16 format=3 uid="uid://clln526f2evrg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/In Game Level/in_game_level.gd" id="1_7qlqi"]
 [ext_resource type="Texture2D" uid="uid://bb22yujk6vn6k" path="res://Assets/Sprites/images/backgrounds/background1.PNG" id="1_ahrkr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmwfvgflfs50n" path="res://Assets/Sprites/images/backgrounds/background1_gameover_mask.PNG" id="3_gy1mr"]
 [ext_resource type="Texture2D" uid="uid://bbr2rl3bqor88" path="res://Assets/Sprites/UI_Texture/SeedBank.PNG" id="5_ia30w"]
 [ext_resource type="Texture2D" uid="uid://b3novdtv2x7d1" path="res://Assets/Sprites/UI_Texture/coinbank.PNG" id="6_ou0s8"]
+[ext_resource type="FontFile" uid="uid://o0ho5a4b7eyd" path="res://Assets/Fonts/continuum 一代数字/contb.ttf" id="7_gygll"]
 [ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="7_yoicx"]
 [ext_resource type="Texture2D" uid="uid://37whl41l4ko6" path="res://Assets/Sprites/images/item/Shovel/ShovelBank.PNG" id="8_sk5re"]
 [ext_resource type="Texture2D" uid="uid://d34vo51wp27nr" path="res://Assets/Sprites/images/item/Shovel/Shovel.PNG" id="9_q0u8d"]
@@ -121,32 +122,94 @@ libraries = {
 "": SubResource("AnimationLibrary_qkbor")
 }
 
-[node name="SeedBank" type="Sprite2D" parent="."]
-position = Vector2(-216, -258)
+[node name="In Game UI" type="CanvasLayer" parent="."]
+
+[node name="Seed Band" type="Control" parent="In Game UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="Seed Bank BG" type="TextureRect" parent="In Game UI/Seed Band"]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 456.0
+offset_bottom = 87.0
 texture = ExtResource("5_ia30w")
 
-[node name="Coinbank" type="Sprite2D" parent="."]
-position = Vector2(-367, 280)
+[node name="Sun Text" type="Label" parent="In Game UI/Seed Band"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 61.0
+offset_right = 77.0
+offset_bottom = 84.0
+theme = ExtResource("7_yoicx")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_gygll")
+theme_override_font_sizes/font_size = 17
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shovel" type="Control" parent="In Game UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="Shovel Bank" type="TextureRect" parent="In Game UI/Shovel"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 5.0
+offset_right = 531.0
+offset_bottom = 77.0
+texture = ExtResource("8_sk5re")
+
+[node name="Shovel Item" type="TextureRect" parent="In Game UI/Shovel"]
+layout_mode = 0
+offset_left = 456.0
+offset_right = 536.0
+offset_bottom = 80.0
+texture = ExtResource("9_q0u8d")
+
+[node name="Coin Bank" type="Control" parent="In Game UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 599.0
+
+[node name="Coin Bank BG" type="TextureRect" parent="In Game UI/Coin Bank"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 559.0
+offset_right = 190.0
+offset_bottom = 599.0
 texture = ExtResource("6_ou0s8")
 
-[node name="Level Info" type="Label" parent="."]
-offset_left = 40.0
-offset_top = 275.0
-offset_right = 105.0
-offset_bottom = 300.0
+[node name="Coin Text" type="Label" parent="In Game UI/Coin Bank"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 566.0
+offset_right = 190.0
+offset_bottom = 599.0
 theme = ExtResource("7_yoicx")
+theme_override_colors/font_color = Color(0.701961, 0.988235, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_gygll")
+theme_override_font_sizes/font_size = 17
+text = "$114,514"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level Info" type="Label" parent="In Game UI"]
+offset_left = 700.0
+offset_top = 572.0
+offset_right = 775.0
+offset_bottom = 597.0
+theme = ExtResource("7_yoicx")
+theme_override_colors/font_color = Color(0.87451, 0.729412, 0.380392, 1)
 theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_gygll")
 theme_override_font_sizes/font_size = 22
 text = "Level: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Shovel" type="Node2D" parent="."]
-
-[node name="Shovel Bank" type="Sprite2D" parent="Shovel"]
-position = Vector2(49, -258)
-texture = ExtResource("8_sk5re")
-
-[node name="Shovel Item" type="Sprite2D" parent="Shovel"]
-position = Vector2(48, -257)
-texture = ExtResource("9_q0u8d")
