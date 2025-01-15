@@ -1,5 +1,10 @@
 extends Control
 
+# index 0=>up 1=>down
+@onready var left: FlippableTextureRect = $Textures/Left
+@onready var mid: FlippableTextureRect = $Textures/Mid
+@onready var right: FlippableTextureRect = $Textures/Right
+
 @warning_ignore("unused_signal")
 signal button_clicked;
 
@@ -11,11 +16,16 @@ func on_button_down() -> void:
 		return ;
 	in_animation = true;
 	position += pressed_position_delta;
-
+	left.switch_to(1);
+	mid.switch_to(1);
+	right.switch_to(1);
 
 func on_button_up() -> void:
 	in_animation = false;
 	position -= pressed_position_delta;
+	left.switch_to(0);
+	mid.switch_to(0);
+	right.switch_to(0);
 
 func on_active_button_pressed() -> void:
 	emit_signal("button_clicked");

@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmtjdxmss3d0f"]
+[gd_scene load_steps=12 format=3 uid="uid://bmtjdxmss3d0f"]
 
 [ext_resource type="Texture2D" uid="uid://dptenu3w72ivk" path="res://Assets/Sprites/UI_Texture/Button/button_left.PNG" id="1_n4x8u"]
 [ext_resource type="Script" path="res://Prefabs/UI Element/Game Themed Button/game_themed_button.gd" id="1_vfjvc"]
 [ext_resource type="Texture2D" uid="uid://lvkm4tgd21xs" path="res://Assets/Sprites/UI_Texture/Button/button_middle.PNG" id="2_np2bu"]
+[ext_resource type="PackedScene" uid="uid://cy5cwlhcsx1dl" path="res://Prefabs/UI Element/Flippable TextureRect/Flippable TextureRect.tscn" id="2_nq6d3"]
 [ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="2_uj1o2"]
 [ext_resource type="Texture2D" uid="uid://diy0q6ynrd4wn" path="res://Assets/Sprites/UI_Texture/Button/button_right.PNG" id="3_4m1v6"]
+[ext_resource type="Texture2D" uid="uid://ca6uor2ael6qn" path="res://Assets/Sprites/UI_Texture/Button/button_down_left.PNG" id="4_11ui2"]
 [ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="4_kmfen"]
 [ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="5_mjfi8"]
+[ext_resource type="Texture2D" uid="uid://dxhv58bl7xtyg" path="res://Assets/Sprites/UI_Texture/Button/button_down_middle.PNG" id="6_aiofk"]
+[ext_resource type="Texture2D" uid="uid://dyos66jmr2ufn" path="res://Assets/Sprites/UI_Texture/Button/button_down_right.PNG" id="8_63kmr"]
 
 [node name="Game Themed Button" type="Control"]
 layout_mode = 3
@@ -21,28 +25,26 @@ anchors_preset = 0
 offset_right = 126.0
 offset_bottom = 46.0
 
-[node name="Left" type="TextureRect" parent="Textures"]
-z_index = -3
+[node name="Left" parent="Textures" instance=ExtResource("2_nq6d3")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 texture = ExtResource("1_n4x8u")
+textures = Array[Texture2D]([ExtResource("1_n4x8u"), ExtResource("4_11ui2")])
 
-[node name="Mid" type="TextureRect" parent="Textures"]
-z_index = -3
+[node name="Mid" parent="Textures" instance=ExtResource("2_nq6d3")]
 layout_mode = 0
 offset_left = 40.0
 offset_right = 86.0
 offset_bottom = 46.0
 texture = ExtResource("2_np2bu")
+textures = Array[Texture2D]([ExtResource("2_np2bu"), ExtResource("6_aiofk")])
 
-[node name="Right" type="TextureRect" parent="Textures"]
-z_index = -3
+[node name="Right" parent="Textures" instance=ExtResource("2_nq6d3")]
 layout_mode = 0
 offset_left = 86.0
 offset_right = 126.0
 offset_bottom = 46.0
 texture = ExtResource("3_4m1v6")
+textures = Array[Texture2D]([ExtResource("3_4m1v6"), ExtResource("8_63kmr")])
 
 [node name="Button Text" type="Label" parent="."]
 z_index = -3

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy5cwlhcsx1dl"]
+
+[ext_resource type="Script" path="res://Prefabs/UI Element/Flippable TextureRect/flippable_texture_rect.gd" id="2_mgwnu"]
+
+[node name="Flippable TextureRect" type="TextureRect"]
+z_index = -3
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_mgwnu")
