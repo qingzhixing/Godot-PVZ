@@ -14,13 +14,9 @@ extends Node2D
 @export_range(0, 1) var sprout2_progress: float;
 @export_range(0, 1) var sprout3_progress: float;
 
-@warning_ignore("unused_signal")
 signal sprout1_sprout;
-@warning_ignore("unused_signal")
 signal sprout2_sprout;
-@warning_ignore("unused_signal")
 signal sprout3_sprout;
-@warning_ignore("unused_signal")
 signal button_clicked;
 
 var sprout1_sprouted: bool = false;
@@ -40,7 +36,7 @@ const MIN_CAP_ROLL_X: float = -152;
 const MAX_CAP_ROLL_X: float = 136;
 
 func on_button_click():
-	emit_signal("button_clicked");
+	button_clicked.emit();
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -72,13 +68,13 @@ func _process(delta: float) -> void:
 	# sprout animation
 	if loading_process >= sprout1_progress && !sprout1_sprouted:
 		sprout1_sprouted = true;
-		emit_signal("sprout1_sprout");
+		sprout1_sprout.emit();
 
 	if loading_process >= sprout2_progress && !sprout2_sprouted:
 		sprout2_sprouted = true;
-		emit_signal("sprout2_sprout");
+		sprout2_sprout.emit();
 		
 	if loading_process >= sprout3_progress && !sprout3_sprouted:
 		sprout3_sprouted = true;
-		emit_signal("sprout3_sprout");
+		sprout3_sprout.emit();
 	pass

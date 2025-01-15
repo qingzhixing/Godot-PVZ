@@ -34,3 +34,7 @@ Godot之前用过 , 很舒服 , 给自己加油吧!
 🥠 游戏内种子栏 金币 铲子栏 菜单按钮实现！- 2025.1.12
 
 ![static/In-Game-Window-And-Menu-Button.png](static/In-Game-Window-And-Menu-Button.png)
+
+🎇 实现Option Menu拖动，但是没有蒙版，没有边界限制 2025.1.15
+
+![static/Semi-finished-Draggable.gif](static/Semi-finished-Draggable.gif)

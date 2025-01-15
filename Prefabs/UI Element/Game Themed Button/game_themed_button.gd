@@ -5,7 +5,6 @@ extends Control
 @onready var mid: FlippableTextureRect = $Textures/Mid
 @onready var right: FlippableTextureRect = $Textures/Right
 
-@warning_ignore("unused_signal")
 signal button_clicked;
 
 @export var pressed_position_delta: Vector2 = Vector2(1, 1);
@@ -28,4 +27,4 @@ func on_button_up() -> void:
 	right.switch_to(0);
 
 func on_active_button_pressed() -> void:
-	emit_signal("button_clicked");
+	button_clicked.emit();

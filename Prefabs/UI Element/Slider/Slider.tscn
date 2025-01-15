@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyspkj2lme8q4"]
+
+[ext_resource type="Script" path="res://Prefabs/UI Element/Slider/slider.gd" id="1_6x7u8"]
+[ext_resource type="Texture2D" uid="uid://hxhb73mqsmo4" path="res://Assets/Sprites/UI_Texture/Options/options_sliderslot.PNG" id="2_30fos"]
+[ext_resource type="Texture2D" uid="uid://cdimdculf5gfi" path="res://Assets/Sprites/UI_Texture/Options/options_sliderknob2.PNG" id="3_i41tk"]
+[ext_resource type="PackedScene" uid="uid://btk2g7puus8tr" path="res://Prefabs/Draggable/Draggable.tscn" id="3_vvxon"]
+
+[node name="Slider" type="Node2D"]
+script = ExtResource("1_6x7u8")
+min_x = -11.0
+max_x = 114.0
+
+[node name="slot" type="Sprite2D" parent="."]
+position = Vector2(65, 2)
+texture = ExtResource("2_30fos")
+
+[node name="Knob" parent="." instance=ExtResource("3_vvxon")]
+offset_left = -11.0
+offset_top = -15.0
+offset_right = 11.0
+offset_bottom = 14.0
+texture = ExtResource("3_i41tk")
+has_custom_dragging_handler = true
+
+[connection signal="dragging" from="Knob" to="." method="knob_dragging"]

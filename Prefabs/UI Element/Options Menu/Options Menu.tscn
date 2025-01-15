@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://3gycgamkrmfs"]
+
+[ext_resource type="PackedScene" uid="uid://btk2g7puus8tr" path="res://Prefabs/Draggable/Draggable.tscn" id="1_5uldu"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/AlphaTexture.gdshader" id="1_a2f6i"]
+[ext_resource type="Texture2D" uid="uid://bx0y8hxodkfsf" path="res://Assets/Sprites/UI_Texture/Options/options_menuback_.PNG" id="2_nitv4"]
+[ext_resource type="Texture2D" uid="uid://cfj4wfgq4h6s8" path="res://Assets/Sprites/UI_Texture/Options/options_menuback.PNG" id="3_yhwj5"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="4_nstbu"]
+[ext_resource type="PackedScene" uid="uid://dyspkj2lme8q4" path="res://Prefabs/UI Element/Slider/Slider.tscn" id="5_wjfkj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8twqx"]
+shader = ExtResource("1_a2f6i")
+shader_parameter/greyTexture = ExtResource("2_nitv4")
+
+[node name="Options Menu" type="Node2D"]
+
+[node name="BG" parent="." instance=ExtResource("1_5uldu")]
+material = SubResource("ShaderMaterial_8twqx")
+texture = ExtResource("3_yhwj5")
+
+[node name="Music Setting" type="Node2D" parent="BG"]
+position = Vector2(214, 239)
+
+[node name="Label" type="Label" parent="BG/Music Setting"]
+offset_left = -111.0
+offset_top = -87.0
+offset_right = -71.0
+offset_bottom = -64.0
+theme = ExtResource("4_nstbu")
+text = "MUSIC"
+metadata/_edit_use_anchors_ = true
+
+[node name="Slider" parent="BG/Music Setting" instance=ExtResource("5_wjfkj")]
+position = Vector2(-8, -77)

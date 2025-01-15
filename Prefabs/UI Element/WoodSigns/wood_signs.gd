@@ -3,10 +3,7 @@ extends Node2D
 
 @export var lableText: String = "QingzhiStar!"
 
-@warning_ignore("unused_signal")
 signal change_user_pressed;
-
-@warning_ignore("unused_signal")
 signal zombatar_pressed;
 
 var text_need_update = false;
@@ -23,9 +20,9 @@ func _process(delta: float) -> void:
 		label.text = lableText
 
 func on_change_user_pressed() -> void:
-	emit_signal("change_user_pressed")
+	change_user_pressed.emit()
 	pass # Replace with function body.
 
 func on_zombatar_pressed() -> void:
-	emit_signal("zombatar_pressed")
+	zombatar_pressed.emit()
 	pass # Replace with function body.
