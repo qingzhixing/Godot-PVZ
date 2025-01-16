@@ -8,12 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://cc06ih260osvc" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign3.PNG" id="6_nbd4o"]
 [ext_resource type="Texture2D" uid="uid://dpf582oowxdt3" path="res://Assets/Sprites/UI_Texture/Selector_Screen/SelectorScreen_WoodSign3_press.PNG" id="7_gttop"]
 [ext_resource type="AudioStream" uid="uid://df5ekq8gtb6s6" path="res://Assets/SFX/UI/墓碑按钮_gravebutton.WAV" id="8_dfpj3"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="9_uay8o"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="9_uay8o"]
 [ext_resource type="AudioStream" uid="uid://c7texxmvgh6ko" path="res://Assets/SFX/UI/木告示牌响声 roll_in.WAV" id="10_eljgf"]
 
-[sub_resource type="Animation" id="Animation_17jnm"]
-resource_name = "finished"
-length = 0.5
+[sub_resource type="Animation" id="Animation_8qvdp"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -63,8 +62,9 @@ tracks/3/keys = {
 "values": [Vector2(-147, -82)]
 }
 
-[sub_resource type="Animation" id="Animation_8qvdp"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_17jnm"]
+resource_name = "finished"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -181,9 +181,9 @@ texture = ExtResource("2_gqivj")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -121.0
-offset_top = -412.0
+offset_top = -188.0
 offset_right = 116.0
-offset_bottom = -391.0
+offset_bottom = -167.0
 theme = ExtResource("9_uay8o")
 text = "QingzhiStar!"
 horizontal_alignment = 1
@@ -192,9 +192,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WoodSign_change_user" parent="." instance=ExtResource("3_6c56k")]
 offset_left = -153.0
-offset_top = -368.0
+offset_top = -140.0
 offset_right = 138.0
-offset_bottom = -300.0
+offset_bottom = -72.0
 texture_normal = ExtResource("4_01whn")
 texture_pressed = ExtResource("4_01whn")
 texture_hover = ExtResource("5_e50mt")
@@ -203,9 +203,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WoodSign_zombatar" parent="." instance=ExtResource("3_6c56k")]
 offset_left = -147.0
-offset_top = -310.0
+offset_top = -82.0
 offset_right = 132.0
-offset_bottom = -227.0
+offset_bottom = 1.0
 texture_normal = ExtResource("6_nbd4o")
 texture_pressed = ExtResource("6_nbd4o")
 texture_hover = ExtResource("7_gttop")
@@ -216,6 +216,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Display SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_eljgf")
 autoplay = true
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Display SFX")

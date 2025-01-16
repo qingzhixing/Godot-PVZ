@@ -15,8 +15,13 @@ run/main_scene="res://Scenes/Loading Screen/loading_screen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Assets/Icon/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://Resources/Bus Layout/Audio Bus Layout.tres"
+
 [autoload]
 
+GlobalSettings="*res://Prefabs/Global Settings/Global Settings.gd"
 MusicController="*res://Prefabs/Music Controller/Music Controller.tscn"
 SceneSwitcher="*res://Prefabs/Scene Switcher/Scene Switcher.tscn"
 

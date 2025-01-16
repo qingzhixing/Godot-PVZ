@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b40y7u62gui5m" path="res://Prefabs/UI Element/Shovel Bank/shovel.tscn" id="6_wl6mk"]
 [ext_resource type="FontFile" uid="uid://o0ho5a4b7eyd" path="res://Assets/Fonts/continuum 一代数字/contb.ttf" id="7_gygll"]
 [ext_resource type="PackedScene" uid="uid://ccp04vcqo1bm5" path="res://Prefabs/UI Element/Coin Bank/coin_bank.tscn" id="7_pt61s"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="7_yoicx"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="7_yoicx"]
 [ext_resource type="Texture2D" uid="uid://cedbtsfo3h6o4" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Background.PNG" id="10_gp8v1"]
 [ext_resource type="PackedScene" uid="uid://bmtjdxmss3d0f" path="res://Prefabs/UI Element/Game Themed Button/game_themed_button.tscn" id="10_wucf5"]
 [ext_resource type="Texture2D" uid="uid://4wldp4eyv4hr" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_ImitaterAddOn.PNG" id="11_4nx5x"]

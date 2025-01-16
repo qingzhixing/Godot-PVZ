@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://coswiqiv0ifdf"]
 
 [ext_resource type="Texture2D" uid="uid://bbr2rl3bqor88" path="res://Assets/Sprites/UI_Texture/SeedBank.PNG" id="1_brnfo"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="2_rbivl"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="2_rbivl"]
 [ext_resource type="FontFile" uid="uid://o0ho5a4b7eyd" path="res://Assets/Fonts/continuum 一代数字/contb.ttf" id="3_3luoq"]
 
 [node name="Seed Bank" type="Control"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://s2crsy8ebjhn"]
+
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="1_f45f0"]
+[ext_resource type="Script" path="res://Prefabs/UI Element/Check Box/check_box.gd" id="2_51vlt"]
+[ext_resource type="AudioStream" uid="uid://fe458hjhlpjk" path="res://Assets/SFX/UI/点击1_tap.WAV" id="3_0a71y"]
+
+[node name="CheckBox" type="CheckBox"]
+offset_left = 287.0
+offset_top = 202.0
+offset_right = 337.0
+offset_bottom = 249.0
+theme = ExtResource("1_f45f0")
+script = ExtResource("2_51vlt")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0a71y")
+bus = &"SFX"
+
+[connection signal="toggled" from="." to="." method="on_toggled"]

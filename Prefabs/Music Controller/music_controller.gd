@@ -20,6 +20,7 @@ var last_stream: AudioStream;
 
 func _ready():
 	audio_player.stream = music_Crazy_Dave;
+	audio_player.volume_db = GlobalSettings.music_volume
 
 func play_stream(stream: AudioStream):
 	if last_stream == stream:
@@ -33,4 +34,4 @@ func stop():
 	audio_player.stop();
 
 func set_volume(volume: float):
-	audio_player.volume = volume;
+	audio_player.volume_db = volume;

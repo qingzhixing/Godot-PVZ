@@ -1,5 +1,5 @@
 extends Button
-@onready var audio_player: AudioStreamPlayer2D = $AudioPlayer
+@onready var sfx: AudioStreamPlayer2D = $SFX
 
 @export var tap_audio: Array[AudioStream];
 
@@ -8,7 +8,7 @@ signal button_click_out_handler;
 func on_pressed() -> void:
 	if tap_audio == null || tap_audio.size() == 0:
 		return ;
-	audio_player.stream = tap_audio[randi() % tap_audio.size()];
-	audio_player.play();
+	sfx.stream = tap_audio[randi() % tap_audio.size()];
+	sfx.play();
 	button_click_out_handler.emit();
 	pass # Replace with function body.

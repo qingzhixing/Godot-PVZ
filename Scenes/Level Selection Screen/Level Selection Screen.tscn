@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://6oj0x1ovkngh" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button2.PNG" id="4_vb75c"]
 [ext_resource type="Texture2D" uid="uid://bx7fjdeqf7cob" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button2_Glow.PNG" id="5_iojjs"]
 [ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="6_11tc2"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="7_rhwvg"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="7_rhwvg"]
 
 [node name="Level Selection Screen" type="Node2D"]
 script = ExtResource("1_5y2sf")

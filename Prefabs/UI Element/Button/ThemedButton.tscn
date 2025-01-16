@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://blnmh2nl5yc6p"]
 
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="1_1ey00"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="1_1ey00"]
 [ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="1_b7wrc"]
 [ext_resource type="Script" path="res://Prefabs/UI Element/Button/themed_button.gd" id="3_m3e6y"]
 [ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="4_xjyal"]
@@ -48,6 +48,7 @@ text = "Button Text"
 script = ExtResource("3_m3e6y")
 tap_audio = Array[AudioStream]([ExtResource("4_xjyal")])
 
-[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
 
 [connection signal="pressed" from="." to="." method="on_pressed"]

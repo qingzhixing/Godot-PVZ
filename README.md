@@ -42,3 +42,6 @@ Godot之前用过 , 很舒服 , 给自己加油吧!
 🎆 拥有 Mask 的 Option Menu! 自然！ 2025.1.16
 
 ![static/Option-Menu-With-Mask.gif](static/Option-Menu-With-Mask.gif)
+
+🎀 实现音乐音量以及音效的调节！ 2025.1.17
+ > 这个没有图片只有视频

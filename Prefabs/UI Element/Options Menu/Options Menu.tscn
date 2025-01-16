@@ -1,15 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://3gycgamkrmfs"]
+[gd_scene load_steps=19 format=3 uid="uid://3gycgamkrmfs"]
 
 [ext_resource type="PackedScene" uid="uid://btk2g7puus8tr" path="res://Prefabs/Draggable/Draggable.tscn" id="1_5uldu"]
 [ext_resource type="Shader" path="res://Scripts/Shaders/AlphaTexture.gdshader" id="1_a2f6i"]
 [ext_resource type="Script" path="res://Prefabs/UI Element/Options Menu/options_menu.gd" id="1_or6l7"]
+[ext_resource type="AudioStream" uid="uid://fe458hjhlpjk" path="res://Assets/SFX/UI/点击1_tap.WAV" id="2_47501"]
 [ext_resource type="Texture2D" uid="uid://bx0y8hxodkfsf" path="res://Assets/Sprites/UI_Texture/Options/options_menuback_.PNG" id="2_nitv4"]
 [ext_resource type="Texture2D" uid="uid://cfj4wfgq4h6s8" path="res://Assets/Sprites/UI_Texture/Options/options_menuback.PNG" id="3_yhwj5"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="4_nstbu"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="4_nstbu"]
 [ext_resource type="Image" uid="uid://ck7fwobnrlaqv" path="res://Assets/Sprites/UI_Texture/Options/options_menuback_mask.PNG" id="5_fsn3f"]
 [ext_resource type="PackedScene" uid="uid://dyspkj2lme8q4" path="res://Prefabs/UI Element/Slider/Slider.tscn" id="5_wjfkj"]
 [ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="8_gdxp7"]
 [ext_resource type="FontFile" uid="uid://bxlbpn4jhrmf2" path="res://Assets/Fonts/方正少儿_GBK.ttf" id="10_ec4bj"]
+[ext_resource type="PackedScene" uid="uid://s2crsy8ebjhn" path="res://Prefabs/UI Element/Check Box/check_box.tscn" id="11_jikgx"]
 [ext_resource type="PackedScene" uid="uid://3rev1qy7xumm" path="res://Prefabs/UI Element/Game Themed Button/game_themed_buttonx3.tscn" id="11_yygdi"]
 [ext_resource type="Texture2D" uid="uid://cnw6imsl6ncx0" path="res://Assets/Sprites/UI_Texture/Options/options_backtogamebutton0.PNG" id="13_7rjiq"]
 [ext_resource type="AudioStream" uid="uid://df5ekq8gtb6s6" path="res://Assets/SFX/UI/墓碑按钮_gravebutton.WAV" id="13_kqj3p"]
@@ -22,6 +24,7 @@ shader_parameter/greyTexture = ExtResource("2_nitv4")
 
 [node name="Options Menu" type="Node2D"]
 script = ExtResource("1_or6l7")
+sound_sfx_slide_end_audio = ExtResource("2_47501")
 
 [node name="BG" parent="." instance=ExtResource("1_5uldu")]
 material = SubResource("ShaderMaterial_8twqx")
@@ -113,12 +116,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CheckBox" type="CheckBox" parent="3D ACCELERATION"]
-offset_left = 287.0
-offset_top = 202.0
-offset_right = 337.0
-offset_bottom = 249.0
-theme = ExtResource("4_nstbu")
+[node name="CheckBox" parent="3D ACCELERATION" instance=ExtResource("11_jikgx")]
 
 [node name="Full Screen" type="Node2D" parent="."]
 position = Vector2(-6, 3)
@@ -139,19 +137,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CheckBox" type="CheckBox" parent="Full Screen"]
-offset_left = 287.0
-offset_top = 202.0
-offset_right = 337.0
-offset_bottom = 249.0
-theme = ExtResource("4_nstbu")
+[node name="CheckBox" parent="Full Screen" instance=ExtResource("11_jikgx")]
+offset_left = 286.0
+offset_top = 201.0
+offset_right = 336.0
+offset_bottom = 248.0
 
 [node name="View Almanac" parent="." instance=ExtResource("11_yygdi")]
 z_index = 6
-offset_left = 99.0
-offset_top = 244.0
-offset_right = 313.0
-offset_bottom = 284.0
+offset_left = 100.0
+offset_top = 241.0
+offset_right = 314.0
+offset_bottom = 281.0
 click_audio = ExtResource("13_kqj3p")
 
 [node name="Button Text" type="Label" parent="View Almanac"]
@@ -173,9 +170,9 @@ vertical_alignment = 1
 [node name="Restart Level" parent="." instance=ExtResource("11_yygdi")]
 z_index = 6
 offset_left = 99.0
-offset_top = 284.0
+offset_top = 283.0
 offset_right = 313.0
-offset_bottom = 324.0
+offset_bottom = 323.0
 click_audio = ExtResource("13_kqj3p")
 
 [node name="Button Text" type="Label" parent="Restart Level"]
@@ -248,5 +245,13 @@ text = "Back To Game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
 [connection signal="drag_start" from="BG" to="." method="bg_drag_start"]
 [connection signal="drag_stop" from="BG" to="." method="bg_drag_stop"]
+[connection signal="value_changed" from="Music Setting/Slider" to="." method="music_volume_changed"]
+[connection signal="drag_stop" from="Sound FX/Slider" to="." method="sfx_drag_stop"]
+[connection signal="value_changed" from="Sound FX/Slider" to="." method="SFX_volume_changed"]
+[connection signal="toggled" from="3D ACCELERATION/CheckBox" to="." method="acceleration_3D"]
+[connection signal="toggled" from="Full Screen/CheckBox" to="." method="full_screen_toggled"]

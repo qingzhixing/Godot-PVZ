@@ -13,6 +13,7 @@ click_audio = ExtResource("3_w5tf5")
 pressed_position_delta = Vector2(1, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
 
 [connection signal="button_down" from="." to="." method="on_button_down"]
 [connection signal="button_up" from="." to="." method="on_button_up"]

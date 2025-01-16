@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://b4ny43tpvs30s" path="res://Assets/SFX/UI/按钮点击_buttonclick.WAV" id="4_q0n1n"]
 [ext_resource type="Texture2D" uid="uid://c37nmjfegwe7p" path="res://Assets/Sprites/images/Challenging/MiniGame_trophy.PNG" id="5_s7mkq"]
 [ext_resource type="Texture2D" uid="uid://ceakm1ad53e22" path="res://Assets/Sprites/images/Challenging/Challenge_Thumbnails/Wall-nut Bowling.PNG" id="6_dufl5"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="8_744e2"]
+[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Resources/Themes/CustomTheme.tres" id="8_744e2"]
 
 [node name="Level Window" type="Node2D"]
 script = ExtResource("1_kive0")

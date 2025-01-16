@@ -38,3 +38,4 @@ music_WateryGraves = ExtResource("13_2o26i")
 music_Crazy_Dave = ExtResource("14_ddku7")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+bus = &"Music"
