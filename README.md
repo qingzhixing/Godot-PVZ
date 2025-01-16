@@ -38,3 +38,7 @@ Godot之前用过 , 很舒服 , 给自己加油吧!
 🎇 实现Option Menu拖动，但是没有蒙版，没有边界限制 2025.1.15
 
 ![static/Semi-finished-Draggable.gif](static/Semi-finished-Draggable.gif)
+
+🎆 拥有 Mask 的 Option Menu! 自然！ 2025.1.16
+
+![static/Option-Menu-With-Mask.gif](static/Option-Menu-With-Mask.gif)

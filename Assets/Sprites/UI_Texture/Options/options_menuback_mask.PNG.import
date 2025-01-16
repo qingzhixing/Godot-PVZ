@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://ck7fwobnrlaqv"
+path="res://.godot/imported/options_menuback_mask.PNG-e1a997f59b7a4d2805ace4f9147baeac.image"
+
+[deps]
+
+source_file="res://Assets/Sprites/UI_Texture/Options/options_menuback_mask.PNG"
+dest_files=["res://.godot/imported/options_menuback_mask.PNG-e1a997f59b7a4d2805ace4f9147baeac.image"]
+
+[params]
+

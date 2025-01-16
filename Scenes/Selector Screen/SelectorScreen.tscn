@@ -346,6 +346,7 @@ texture_pressed = ExtResource("56_24ge5")
 texture_hover = ExtResource("56_24ge5")
 
 [node name="Options Menu" parent="UI" instance=ExtResource("58_a07nv")]
+position = Vector2(-228, -253)
 
 [connection signal="pressed" from="UI/Selections/StartAdventure/StartAdventure_Button" to="." method="on_adventure_button_pressed"]
 [connection signal="pressed" from="UI/Selections/Adventure/Adventure_button" to="." method="on_adventure_button_pressed"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Prefabs/UI Element/Slider/slider.gd" id="1_6x7u8"]
 [ext_resource type="Texture2D" uid="uid://hxhb73mqsmo4" path="res://Assets/Sprites/UI_Texture/Options/options_sliderslot.PNG" id="2_30fos"]
-[ext_resource type="Texture2D" uid="uid://cdimdculf5gfi" path="res://Assets/Sprites/UI_Texture/Options/options_sliderknob2.PNG" id="3_i41tk"]
+[ext_resource type="Texture2D" uid="uid://cdimdculf5gfi" path="res://Assets/Sprites/UI_Texture/Options/options_sliderknob2.png" id="3_i41tk"]
 [ext_resource type="PackedScene" uid="uid://btk2g7puus8tr" path="res://Prefabs/Draggable/Draggable.tscn" id="3_vvxon"]
 
 [node name="Slider" type="Node2D"]
@@ -19,7 +19,8 @@ offset_left = -11.0
 offset_top = -15.0
 offset_right = 11.0
 offset_bottom = 14.0
-texture = ExtResource("3_i41tk")
+texture_normal = ExtResource("3_i41tk")
 has_custom_dragging_handler = true
 
-[connection signal="dragging" from="Knob" to="." method="knob_dragging"]
+[connection signal="drag_start" from="Knob" to="." method="knob_drag_start"]
+[connection signal="drag_stop" from="Knob" to="." method="knob_drag_stop"]

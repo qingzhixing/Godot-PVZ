@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Prefabs/Draggable/draggable.gd" id="1_yqo85"]
 
-[node name="Draggable" type="TextureRect"]
+[node name="Draggable" type="TextureButton"]
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("1_yqo85")
