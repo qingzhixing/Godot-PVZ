@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://3rev1qy7xumm"]
+
+[ext_resource type="Script" path="res://Prefabs/UI Element/Game Themed Button/game_themed_button.gd" id="1_0behj"]
+[ext_resource type="PackedScene" uid="uid://cy5cwlhcsx1dl" path="res://Prefabs/UI Element/Flippable TextureRect/Flippable TextureRect.tscn" id="2_djrev"]
+[ext_resource type="Texture2D" uid="uid://dptenu3w72ivk" path="res://Assets/Sprites/UI_Texture/Button/button_left.PNG" id="3_b7dcl"]
+[ext_resource type="Texture2D" uid="uid://ca6uor2ael6qn" path="res://Assets/Sprites/UI_Texture/Button/button_down_left.PNG" id="4_7qrsr"]
+[ext_resource type="Texture2D" uid="uid://lvkm4tgd21xs" path="res://Assets/Sprites/UI_Texture/Button/button_middle.PNG" id="5_cjebc"]
+[ext_resource type="Texture2D" uid="uid://dxhv58bl7xtyg" path="res://Assets/Sprites/UI_Texture/Button/button_down_middle.PNG" id="6_qo7i1"]
+[ext_resource type="Texture2D" uid="uid://diy0q6ynrd4wn" path="res://Assets/Sprites/UI_Texture/Button/button_right.PNG" id="7_6qot2"]
+[ext_resource type="Texture2D" uid="uid://dyos66jmr2ufn" path="res://Assets/Sprites/UI_Texture/Button/button_down_right.PNG" id="8_30kgb"]
+[ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="9_iy7hf"]
+
+[node name="Game Themed Button" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 214.0
+offset_bottom = 40.0
+script = ExtResource("1_0behj")
+
+[node name="Textures" type="Control" parent="."]
+z_index = -3
+anchors_preset = 0
+offset_right = 218.0
+offset_bottom = 46.0
+
+[node name="Left" parent="Textures" instance=ExtResource("2_djrev")]
+layout_mode = 0
+texture = ExtResource("3_b7dcl")
+textures = Array[Texture2D]([ExtResource("3_b7dcl"), ExtResource("4_7qrsr")])
+
+[node name="Mid" parent="Textures" instance=ExtResource("2_djrev")]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 86.0
+offset_bottom = 46.0
+texture = ExtResource("5_cjebc")
+textures = Array[Texture2D]([ExtResource("5_cjebc"), ExtResource("6_qo7i1")])
+
+[node name="Mid2" parent="Textures" instance=ExtResource("2_djrev")]
+layout_mode = 0
+offset_left = 86.0
+offset_right = 132.0
+offset_bottom = 46.0
+texture = ExtResource("5_cjebc")
+textures = Array[Texture2D]([ExtResource("5_cjebc"), ExtResource("6_qo7i1")])
+
+[node name="Mid3" parent="Textures" instance=ExtResource("2_djrev")]
+layout_mode = 0
+offset_left = 132.0
+offset_right = 178.0
+offset_bottom = 46.0
+texture = ExtResource("5_cjebc")
+textures = Array[Texture2D]([ExtResource("5_cjebc"), ExtResource("6_qo7i1")])
+
+[node name="Right" parent="Textures" instance=ExtResource("2_djrev")]
+layout_mode = 0
+offset_left = 178.0
+offset_right = 218.0
+offset_bottom = 46.0
+texture = ExtResource("7_6qot2")
+textures = Array[Texture2D]([ExtResource("7_6qot2"), ExtResource("8_30kgb")])
+
+[node name="Active Button" parent="." instance=ExtResource("9_iy7hf")]
+z_index = 5
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 42.0
+hover_audio = null
+pressed_position_delta = Vector2(0, 0)
+enable_mask = true
+
+[connection signal="button_down" from="Active Button" to="." method="on_button_down"]
+[connection signal="button_up" from="Active Button" to="." method="on_button_up"]
+[connection signal="pressed" from="Active Button" to="." method="on_active_button_pressed"]

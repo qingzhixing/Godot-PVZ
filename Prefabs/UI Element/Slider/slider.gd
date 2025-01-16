@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name CustomSlider
+
 @onready var knob: TextureButton = $Knob
 
 @export var min_x: float;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3gycgamkrmfs"]
+[gd_scene load_steps=17 format=3 uid="uid://3gycgamkrmfs"]
 
 [ext_resource type="PackedScene" uid="uid://btk2g7puus8tr" path="res://Prefabs/Draggable/Draggable.tscn" id="1_5uldu"]
 [ext_resource type="Shader" path="res://Scripts/Shaders/AlphaTexture.gdshader" id="1_a2f6i"]
@@ -8,6 +8,13 @@
 [ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="4_nstbu"]
 [ext_resource type="Image" uid="uid://ck7fwobnrlaqv" path="res://Assets/Sprites/UI_Texture/Options/options_menuback_mask.PNG" id="5_fsn3f"]
 [ext_resource type="PackedScene" uid="uid://dyspkj2lme8q4" path="res://Prefabs/UI Element/Slider/Slider.tscn" id="5_wjfkj"]
+[ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="8_gdxp7"]
+[ext_resource type="FontFile" uid="uid://bxlbpn4jhrmf2" path="res://Assets/Fonts/方正少儿_GBK.ttf" id="10_ec4bj"]
+[ext_resource type="PackedScene" uid="uid://3rev1qy7xumm" path="res://Prefabs/UI Element/Game Themed Button/game_themed_buttonx3.tscn" id="11_yygdi"]
+[ext_resource type="Texture2D" uid="uid://cnw6imsl6ncx0" path="res://Assets/Sprites/UI_Texture/Options/options_backtogamebutton0.PNG" id="13_7rjiq"]
+[ext_resource type="AudioStream" uid="uid://df5ekq8gtb6s6" path="res://Assets/SFX/UI/墓碑按钮_gravebutton.WAV" id="13_kqj3p"]
+[ext_resource type="Texture2D" uid="uid://chck6vtvpo8ga" path="res://Assets/Sprites/UI_Texture/Options/options_backtogamebutton2.PNG" id="14_6iws8"]
+[ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="16_5o3uf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8twqx"]
 shader = ExtResource("1_a2f6i")
@@ -25,19 +32,221 @@ has_custom_dragging_handler = true
 bitmap_mask_image = ExtResource("5_fsn3f")
 
 [node name="Music Setting" type="Node2D" parent="."]
-position = Vector2(214, 239)
+position = Vector2(208, 214)
 
 [node name="Label" type="Label" parent="Music Setting"]
-offset_left = -111.0
-offset_top = -87.0
-offset_right = -71.0
-offset_bottom = -64.0
+offset_left = -112.0
+offset_top = -89.0
+offset_right = -33.0
+offset_bottom = -63.0
 theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0.415686, 0.423529, 0.564706, 1)
+theme_override_colors/font_outline_color = Color(0.0431373, 0.0431373, 0.0588235, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 23
 text = "MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Slider" parent="Music Setting" instance=ExtResource("5_wjfkj")]
 position = Vector2(-8, -77)
+
+[node name="Sound FX" type="Node2D" parent="."]
+position = Vector2(208, 244)
+
+[node name="Label" type="Label" parent="Sound FX"]
+offset_left = -153.0
+offset_top = -91.0
+offset_right = -26.0
+offset_bottom = -65.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0.415686, 0.423529, 0.564706, 1)
+theme_override_colors/font_outline_color = Color(0.0431373, 0.0431373, 0.0588235, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 23
+text = "Sound FX"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Slider" parent="Sound FX" instance=ExtResource("5_wjfkj")]
+position = Vector2(-8, -77)
+
+[node name="3D ACCELERATION" type="Node2D" parent="."]
+position = Vector2(-7, -28)
+
+[node name="Label" type="Node2D" parent="3D ACCELERATION"]
+position = Vector2(0, 10)
+
+[node name="Number Label" type="Label" parent="3D ACCELERATION/Label"]
+offset_left = -27.0
+offset_top = 196.0
+offset_right = 200.0
+offset_bottom = 232.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0.415686, 0.423529, 0.564706, 1)
+theme_override_colors/font_outline_color = Color(0.0431373, 0.0431373, 0.0588235, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("10_ec4bj")
+theme_override_font_sizes/font_size = 23
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Alpha Label" type="Label" parent="3D ACCELERATION/Label"]
+offset_left = 75.0
+offset_top = 196.0
+offset_right = 302.0
+offset_bottom = 232.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0.415686, 0.423529, 0.564706, 1)
+theme_override_colors/font_outline_color = Color(0.0431373, 0.0431373, 0.0588235, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 23
+text = "D ACCELERATION"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="CheckBox" parent="3D ACCELERATION"]
+offset_left = 287.0
+offset_top = 202.0
+offset_right = 337.0
+offset_bottom = 249.0
+theme = ExtResource("4_nstbu")
+
+[node name="Full Screen" type="Node2D" parent="."]
+position = Vector2(-6, 3)
+
+[node name="Label" type="Label" parent="Full Screen"]
+offset_left = 98.0
+offset_top = 205.0
+offset_right = 325.0
+offset_bottom = 241.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0.415686, 0.423529, 0.564706, 1)
+theme_override_colors/font_outline_color = Color(0.0431373, 0.0431373, 0.0588235, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 23
+text = "Full Screen"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="CheckBox" parent="Full Screen"]
+offset_left = 287.0
+offset_top = 202.0
+offset_right = 337.0
+offset_bottom = 249.0
+theme = ExtResource("4_nstbu")
+
+[node name="View Almanac" parent="." instance=ExtResource("11_yygdi")]
+z_index = 6
+offset_left = 99.0
+offset_top = 244.0
+offset_right = 313.0
+offset_bottom = 284.0
+click_audio = ExtResource("13_kqj3p")
+
+[node name="Button Text" type="Label" parent="View Almanac"]
+layout_mode = 0
+offset_right = 212.0
+offset_bottom = 40.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0, 0.768627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.188235, 0.188235, 0.254902, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 22
+text = "View Almanac"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart Level" parent="." instance=ExtResource("11_yygdi")]
+z_index = 6
+offset_left = 99.0
+offset_top = 284.0
+offset_right = 313.0
+offset_bottom = 324.0
+click_audio = ExtResource("13_kqj3p")
+
+[node name="Button Text" type="Label" parent="Restart Level"]
+layout_mode = 0
+offset_right = 212.0
+offset_bottom = 40.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0, 0.768627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.188235, 0.188235, 0.254902, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 22
+text = "Restart Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" parent="." instance=ExtResource("11_yygdi")]
+z_index = 6
+offset_left = 99.0
+offset_top = 326.0
+offset_right = 313.0
+offset_bottom = 366.0
+click_audio = ExtResource("13_kqj3p")
+
+[node name="Button Text" type="Label" parent="Main Menu"]
+layout_mode = 0
+offset_right = 212.0
+offset_bottom = 40.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0, 0.768627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.188235, 0.188235, 0.254902, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 22
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back To Game2" parent="." instance=ExtResource("16_5o3uf")]
+offset_left = 28.0
+offset_top = 382.0
+offset_right = 388.0
+offset_bottom = 482.0
+texture_normal = ExtResource("13_7rjiq")
+texture_pressed = ExtResource("14_6iws8")
+texture_hover = ExtResource("13_7rjiq")
+texture_disabled = ExtResource("13_7rjiq")
+texture_focused = ExtResource("14_6iws8")
+hover_audio = null
+click_audio = ExtResource("13_kqj3p")
+
+[node name="Button Text" type="Label" parent="Back To Game2"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 348.0
+offset_bottom = 88.0
+theme = ExtResource("4_nstbu")
+theme_override_colors/font_color = Color(0, 0.768627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.188235, 0.188235, 0.254902, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("8_gdxp7")
+theme_override_font_sizes/font_size = 40
+text = "Back To Game"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="drag_start" from="BG" to="." method="bg_drag_start"]
 [connection signal="drag_stop" from="BG" to="." method="bg_drag_stop"]

@@ -1,4 +1,5 @@
 extends TextureButton
+class_name CustomTextureButton;
 
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
@@ -10,7 +11,7 @@ extends TextureButton
 var in_animation: bool = false;
 
 func _ready() -> void:
-	if enable_mask:
+	if enable_mask && texture_normal:
 		texture_click_mask = BitMap.new();
 		texture_click_mask.create_from_image_alpha(texture_normal.get_image());
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmtjdxmss3d0f"]
+[gd_scene load_steps=10 format=3 uid="uid://bmtjdxmss3d0f"]
 
 [ext_resource type="Texture2D" uid="uid://dptenu3w72ivk" path="res://Assets/Sprites/UI_Texture/Button/button_left.PNG" id="1_n4x8u"]
 [ext_resource type="Script" path="res://Prefabs/UI Element/Game Themed Button/game_themed_button.gd" id="1_vfjvc"]
@@ -7,8 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="2_uj1o2"]
 [ext_resource type="Texture2D" uid="uid://diy0q6ynrd4wn" path="res://Assets/Sprites/UI_Texture/Button/button_right.PNG" id="3_4m1v6"]
 [ext_resource type="Texture2D" uid="uid://ca6uor2ael6qn" path="res://Assets/Sprites/UI_Texture/Button/button_down_left.PNG" id="4_11ui2"]
-[ext_resource type="Theme" uid="uid://bgl2wkcdj1wgv" path="res://Prefabs/UI Element/Themes/CustomTheme.tres" id="4_kmfen"]
-[ext_resource type="FontFile" uid="uid://cif4hscevimd6" path="res://Assets/Fonts/Dwarven-Stonecraft 英文图鉴标题与墓碑.ttf" id="5_mjfi8"]
 [ext_resource type="Texture2D" uid="uid://dxhv58bl7xtyg" path="res://Assets/Sprites/UI_Texture/Button/button_down_middle.PNG" id="6_aiofk"]
 [ext_resource type="Texture2D" uid="uid://dyos66jmr2ufn" path="res://Assets/Sprites/UI_Texture/Button/button_down_right.PNG" id="8_63kmr"]
 
@@ -45,23 +43,6 @@ offset_right = 126.0
 offset_bottom = 46.0
 texture = ExtResource("3_4m1v6")
 textures = Array[Texture2D]([ExtResource("3_4m1v6"), ExtResource("8_63kmr")])
-
-[node name="Button Text" type="Label" parent="."]
-z_index = -3
-layout_mode = 0
-offset_right = 120.0
-offset_bottom = 40.0
-theme = ExtResource("4_kmfen")
-theme_override_colors/font_color = Color(0, 0.768627, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.188235, 0.188235, 0.254902, 1)
-theme_override_constants/shadow_offset_x = -1
-theme_override_constants/shadow_offset_y = -1
-theme_override_constants/shadow_outline_size = 2
-theme_override_fonts/font = ExtResource("5_mjfi8")
-theme_override_font_sizes/font_size = 22
-text = "Menu"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Active Button" parent="." instance=ExtResource("2_uj1o2")]
 z_index = 5

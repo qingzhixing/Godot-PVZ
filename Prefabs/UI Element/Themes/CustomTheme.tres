@@ -1,6 +1,15 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bgl2wkcdj1wgv"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bgl2wkcdj1wgv"]
 
+[ext_resource type="Texture2D" uid="uid://dfg05xdety0h4" path="res://Assets/Sprites/UI_Texture/Options/options_checkbox1.PNG" id="1_ohhmh"]
 [ext_resource type="FontFile" uid="uid://sd1ijmqnu28h" path="res://Assets/Fonts/Brianne-s-Hand 英文图鉴正文.ttf" id="1_unjah"]
+[ext_resource type="Texture2D" uid="uid://daytc605addxq" path="res://Assets/Sprites/UI_Texture/Options/options_checkbox0.PNG" id="2_a1v1g"]
+[ext_resource type="Texture2D" uid="uid://cdimdculf5gfi" path="res://Assets/Sprites/UI_Texture/Options/options_sliderknob2.png" id="3_4b4k6"]
+[ext_resource type="Texture2D" uid="uid://hxhb73mqsmo4" path="res://Assets/Sprites/UI_Texture/Options/options_sliderslot.PNG" id="4_v1sqq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtreu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l12rd"]
+texture = ExtResource("4_v1sqq")
 
 [resource]
 default_font = ExtResource("1_unjah")
@@ -14,6 +23,17 @@ Button/colors/font_focus_color = Color(0.85098, 0.717647, 0.12549, 1)
 Button/colors/font_hover_color = Color(0.956863, 0.345098, 0.0588235, 1)
 Button/colors/font_hover_pressed_color = Color(0.270588, 0.694118, 0.909804, 1)
 Button/colors/font_pressed_color = Color(0.956863, 0.345098, 0.0588235, 1)
+CheckBox/icons/checked = ExtResource("1_ohhmh")
+CheckBox/icons/checked_disabled = ExtResource("1_ohhmh")
+CheckBox/icons/unchecked = ExtResource("2_a1v1g")
+CheckBox/icons/unchecked_disabled = ExtResource("2_a1v1g")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_rtreu")
+HSlider/icons/grabber = ExtResource("3_4b4k6")
+HSlider/icons/grabber_disabled = ExtResource("3_4b4k6")
+HSlider/icons/grabber_highlight = ExtResource("3_4b4k6")
+HSlider/icons/tick = ExtResource("3_4b4k6")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_l12rd")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_l12rd")
 Label/colors/font_color = Color(1, 0.960784, 0.784314, 1)
 Label/font_sizes/font_size = 18
 Label/fonts/font = ExtResource("1_unjah")
