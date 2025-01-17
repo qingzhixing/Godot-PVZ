@@ -20,7 +20,7 @@ func _process(delta):
 		position = get_global_mouse_position() + offset
 
 func full_screen_toggled(toggled_on: bool) -> void:
-	GlobalSettings.full_screen = toggled_on
+	GlobalSettings.set_fullscreen(toggled_on)
 
 
 func acceleration_3D(toggled_on: bool) -> void:
