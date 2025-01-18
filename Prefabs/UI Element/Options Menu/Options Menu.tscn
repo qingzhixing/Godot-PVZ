@@ -255,3 +255,7 @@ bus = &"SFX"
 [connection signal="value_changed" from="Sound FX/Slider" to="." method="SFX_volume_changed"]
 [connection signal="toggled" from="3D ACCELERATION/CheckBox" to="." method="acceleration_3D"]
 [connection signal="toggled" from="Full Screen/CheckBox" to="." method="full_screen_toggled"]
+[connection signal="button_clicked" from="View Almanac" to="." method="_on_view_almanac_button_clicked"]
+[connection signal="button_clicked" from="Restart Level" to="." method="_on_restart_level_button_clicked"]
+[connection signal="button_clicked" from="Main Menu" to="." method="_on_main_menu_button_clicked"]
+[connection signal="pressed" from="Back To Game2" to="." method="_on_back_to_game_2_pressed"]

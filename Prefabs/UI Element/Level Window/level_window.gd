@@ -13,4 +13,4 @@ func _ready() -> void:
 
 
 func on_level_window_button_pressed() -> void:
-	emit_signal("level_window_button_pressed", level_id);
+	level_window_button_pressed.emit(level_id)

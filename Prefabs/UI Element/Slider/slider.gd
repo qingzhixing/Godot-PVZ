@@ -34,6 +34,10 @@ func knob_dragging() -> void:
 	knob.position.x = handled_x;
 	value_changed.emit(get_value());
 
+func knob_restore(value: float):
+	var position_x = min_x + value * (max_x - min_x);
+	knob.position.x = position_x;
+
 @warning_ignore("unused_parameter")
 func _process(delta):
 	if is_dragging:

@@ -18,6 +18,10 @@ func set_fullscreen(value: bool):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
+func get_fullscreen() -> bool:
+	full_screen = (DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN)
+	return full_screen;
+
 func set_music_volume(value: float):
 	music_volume = max(0.0, min(1.0, value))
 	

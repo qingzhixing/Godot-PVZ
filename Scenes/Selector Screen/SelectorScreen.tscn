@@ -346,6 +346,7 @@ texture_pressed = ExtResource("56_24ge5")
 texture_hover = ExtResource("56_24ge5")
 
 [node name="Options Menu" parent="UI" instance=ExtResource("58_a07nv")]
+visible = false
 position = Vector2(-228, -253)
 
 [connection signal="pressed" from="UI/Selections/StartAdventure/StartAdventure_Button" to="." method="on_adventure_button_pressed"]
@@ -355,5 +356,7 @@ position = Vector2(-228, -253)
 [connection signal="pressed" from="UI/Selections/Survival/SurvivalButton" to="." method="on_survival_button_pressed"]
 [connection signal="pressed" from="UI/Almanac" to="." method="on_almanac_pressed"]
 [connection signal="pressed" from="UI/ZenGarden" to="." method="on_zen_garden_pressed"]
+[connection signal="pressed" from="UI/Options" to="UI/Options Menu" method="show"]
 [connection signal="pressed" from="UI/Quit" to="." method="on_quit_pressed"]
 [connection signal="pressed" from="UI/Shop" to="." method="on_shop_pressed"]
+[connection signal="back_to_game_clicked" from="UI/Options Menu" to="UI/Options Menu" method="hide"]
