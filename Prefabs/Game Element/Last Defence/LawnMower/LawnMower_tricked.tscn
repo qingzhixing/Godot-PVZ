@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2ja160up41ix"]
+
+[ext_resource type="Texture2D" uid="uid://c7e4y8q3r2jw8" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_wheelpiece.PNG" id="1_tfvdi"]
+[ext_resource type="Texture2D" uid="uid://dv8u73ugg5w6c" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_wheel2.PNG" id="2_4w4dd"]
+[ext_resource type="Texture2D" uid="uid://c6v46suorkt73" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_wheelshine.PNG" id="3_1r8bo"]
+[ext_resource type="Texture2D" uid="uid://co8l32vag8dh2" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_body_tricked.PNG" id="4_xnnnq"]
+[ext_resource type="Texture2D" uid="uid://cbttftm02ctl6" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_wheel1.PNG" id="5_vgt6a"]
+[ext_resource type="Texture2D" uid="uid://d0mqsxgyma606" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_engine_tricked.PNG" id="6_36ela"]
+[ext_resource type="Texture2D" uid="uid://hd1axdjaqd3w" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_exhaust_tricked.PNG" id="7_syxn0"]
+[ext_resource type="Texture2D" uid="uid://cetp7k6ur15l4" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_pull.PNG" id="8_nfmqg"]
+[ext_resource type="Texture2D" uid="uid://dn7k58h3xv7vc" path="res://Assets/Sprites/reanim/Last_Defence/LawnMower/LawnMower_dice_tricked.PNG" id="9_wscac"]
+
+[node name="LawnMower" type="Node2D"]
+
+[node name="Wheel Back" type="Node2D" parent="."]
+position = Vector2(-72, -21)
+
+[node name="LawnMowerWheelpiece" type="Sprite2D" parent="Wheel Back"]
+position = Vector2(71, 26)
+texture = ExtResource("1_tfvdi")
+
+[node name="LawnMowerWheel2" type="Sprite2D" parent="Wheel Back"]
+position = Vector2(71, 30)
+texture = ExtResource("2_4w4dd")
+
+[node name="LawnMowerWheelshine" type="Sprite2D" parent="Wheel Back"]
+position = Vector2(70, 30)
+texture = ExtResource("3_1r8bo")
+
+[node name="Wheel Back2" type="Node2D" parent="."]
+position = Vector2(-34, -21)
+
+[node name="LawnMowerWheelpiece" type="Sprite2D" parent="Wheel Back2"]
+position = Vector2(71, 26)
+texture = ExtResource("1_tfvdi")
+
+[node name="LawnMowerWheel2" type="Sprite2D" parent="Wheel Back2"]
+position = Vector2(71, 30)
+texture = ExtResource("2_4w4dd")
+
+[node name="LawnMowerWheelshine" type="Sprite2D" parent="Wheel Back2"]
+position = Vector2(70, 30)
+texture = ExtResource("3_1r8bo")
+
+[node name="LawnMowerBody" type="Sprite2D" parent="."]
+texture = ExtResource("4_xnnnq")
+
+[node name="Wheel Front" type="Node2D" parent="."]
+position = Vector2(-76, 9)
+
+[node name="LawnMowerWheelpiece" type="Sprite2D" parent="Wheel Front"]
+position = Vector2(68, 17)
+texture = ExtResource("1_tfvdi")
+
+[node name="LawnMowerWheel1" type="Sprite2D" parent="Wheel Front"]
+position = Vector2(68, 20)
+rotation = 0.00888372
+texture = ExtResource("5_vgt6a")
+
+[node name="LawnMowerWheelshine" type="Sprite2D" parent="Wheel Front"]
+position = Vector2(66, 19)
+texture = ExtResource("3_1r8bo")
+
+[node name="Wheel Front2" type="Node2D" parent="."]
+position = Vector2(-32, 10)
+
+[node name="LawnMowerWheelpiece" type="Sprite2D" parent="Wheel Front2"]
+position = Vector2(67, 19)
+texture = ExtResource("1_tfvdi")
+
+[node name="LawnMowerWheel1" type="Sprite2D" parent="Wheel Front2"]
+position = Vector2(66, 22)
+rotation = 0.00888372
+texture = ExtResource("5_vgt6a")
+
+[node name="LawnMowerWheelshine" type="Sprite2D" parent="Wheel Front2"]
+position = Vector2(64, 21)
+texture = ExtResource("3_1r8bo")
+
+[node name="LawnMowerEngine" type="Sprite2D" parent="."]
+position = Vector2(16, -10)
+texture = ExtResource("6_36ela")
+
+[node name="LawnMowerExhaust" type="Sprite2D" parent="."]
+position = Vector2(6, 23)
+texture = ExtResource("7_syxn0")
+
+[node name="LawnMowerPull" type="Sprite2D" parent="."]
+position = Vector2(-28, 11)
+texture = ExtResource("8_nfmqg")
+
+[node name="LawnMowerDiceTricked" type="Sprite2D" parent="."]
+position = Vector2(-48, -8)
+texture = ExtResource("9_wscac")

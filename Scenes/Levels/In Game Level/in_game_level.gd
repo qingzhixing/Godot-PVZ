@@ -27,3 +27,7 @@ func _ready() -> void:
 
 func on_menu_button_clicked() -> void:
 	SceneSwitcher.jump_to_scene("res://Scenes/Selector Screen/SelectorScreen.tscn");
+
+
+func _on_options_menu_main_menu_buttun_clicked() -> void:
+	SceneSwitcher.jump_to_scene("res://Scenes/Selector Screen/SelectorScreen.tscn");

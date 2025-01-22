@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://clln526f2evrg"]
+[gd_scene load_steps=26 format=3 uid="uid://clln526f2evrg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/In Game Level/in_game_level.gd" id="1_7qlqi"]
 [ext_resource type="Texture2D" uid="uid://bb22yujk6vn6k" path="res://Assets/Sprites/images/backgrounds/background1.PNG" id="1_ahrkr"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bmtjdxmss3d0f" path="res://Prefabs/UI Element/Game Themed Button/game_themed_button.tscn" id="10_wucf5"]
 [ext_resource type="Texture2D" uid="uid://4wldp4eyv4hr" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_ImitaterAddOn.PNG" id="11_4nx5x"]
 [ext_resource type="PackedScene" uid="uid://b2wu8l2hxw6jj" path="res://Prefabs/UI Element/Button/CustomTextureButton.tscn" id="12_oa06o"]
+[ext_resource type="PackedScene" uid="uid://3gycgamkrmfs" path="res://Prefabs/UI Element/Options Menu/Options Menu.tscn" id="12_roefr"]
 [ext_resource type="Texture2D" uid="uid://dilctifd31uhe" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button.PNG" id="13_0ny5i"]
 [ext_resource type="Texture2D" uid="uid://b4v7fwkeijy1n" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button_Disabled.PNG" id="14_7hrmt"]
 [ext_resource type="Texture2D" uid="uid://cs5dh0dmx44w" path="res://Assets/Sprites/UI_Texture/Seed_Chooser/SeedChooser_Button_Glow.PNG" id="15_xfrv5"]
@@ -181,7 +182,13 @@ text = "Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Options Menu" parent="In Game UI" instance=ExtResource("12_roefr")]
+visible = false
+position = Vector2(200, 94)
+scale = Vector2(0.8, 0.8)
+
 [node name="Seed Chooser UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Seed Bank" parent="Seed Chooser UI" instance=ExtResource("5_5jaqr")]
 
@@ -308,7 +315,9 @@ text = "Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_clicked" from="In Game UI/Menu" to="." method="on_menu_button_clicked"]
+[connection signal="button_clicked" from="In Game UI/Menu" to="In Game UI/Options Menu" method="show"]
+[connection signal="back_to_game_clicked" from="In Game UI/Options Menu" to="In Game UI/Options Menu" method="hide"]
+[connection signal="main_menu_buttun_clicked" from="In Game UI/Options Menu" to="." method="_on_options_menu_main_menu_buttun_clicked"]
 [connection signal="mouse_entered" from="Seed Chooser UI/Seed Chooser/Button Start" to="Seed Chooser UI/Seed Chooser/Button Start/Button Start Hover Glow" method="show"]
 [connection signal="mouse_exited" from="Seed Chooser UI/Seed Chooser/Button Start" to="Seed Chooser UI/Seed Chooser/Button Start/Button Start Hover Glow" method="hide"]
 [connection signal="pressed" from="Seed Chooser UI/Seed Chooser/Button Start" to="." method="on_seed_chosen"]
